@@ -1,6 +1,6 @@
 ---
 title: "/tech"
-featured_image: '/images/tech.jpg'
+featured_image: '/tech.jpg'
 description: ""
 ---
 
