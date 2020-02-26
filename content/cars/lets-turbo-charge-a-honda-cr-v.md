@@ -99,7 +99,7 @@ Now we can add more piping and connect the intercooler all the way to the intake
 
 ![](https://cdn-images-1.medium.com/max/2400/0*KfkFftIOMtY7vkBk.jpg)
 
-Hmmm… Upon further review my friend working with me thinks the intercooler shouldn’t stick out in front of the edge of the bumper support. He’s pretty smart so let’s use these brackets to tuck it back farther.
+Hmmm… Upon further review my friend working with me, Josh, thinks the intercooler shouldn’t stick out in front of the edge of the bumper support. Josh is pretty smart so let’s use these brackets to tuck it back farther.
 
 ![](https://cdn-images-1.medium.com/max/2400/0*vLfKwe7VanqGvVl6.jpg)
 
@@ -211,7 +211,7 @@ That’s where these RC Engineering 440cc fuel injectors come in. They’re not 
 
 ![](https://cdn-images-1.medium.com/max/2000/0*g4h90j_ByLJgEuZO.jpg)
 
-They don’t QUITE fit in my fuel rail so my friend here jammed them in an impact socket and is using an impact wrench to shave down the barrels on this sand paper. [#SuburbanEngineering](https://twitter.com/hashtag/SuburbanEngineering?src=hash)
+They don’t QUITE fit in my fuel rail so my friend, Josh, jammed them in an impact socket and is using an impact wrench to shave down the barrels on this sand paper. #SuburbanEngineering
 
 ![](https://cdn-images-1.medium.com/max/2400/0*n7D2jAShr9Kd6nZF.jpg)
 
