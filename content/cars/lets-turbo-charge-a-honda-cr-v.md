@@ -138,7 +138,7 @@ Ok, I need them mounted on the front of the AC condenser to blow through to the 
 
 ![](https://cdn-images-1.medium.com/max/2400/0*OwXzISzTqfVpaISL.jpg)
 
-So let’s unbolt the radiator and condenser and see if wecan make this work.
+So let’s unbolt the radiator and condenser and see if we can make this work.
 
 ![](https://cdn-images-1.medium.com/max/2000/0*aEG5C4ELTK-vXkvJ.jpg)
 
