@@ -1,6 +1,6 @@
 ---
 title: "/cars"
-featured_image: '/images/cars.jpg'
+featured_image: 'images/cars.jpg'
 description: ""
 ---
 
