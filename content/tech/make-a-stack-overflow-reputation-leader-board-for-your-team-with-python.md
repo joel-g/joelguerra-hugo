@@ -13,11 +13,11 @@ Well, look no further than this simple Python Flask application!
 
 ![Screenshot of example leaderboard](https://cdn-images-1.medium.com/max/3466/1*qg-vCU1lPgw52ERBAgGCVQ.png)*Screenshot of example leaderboard*
 
-Here is an example of this website in action using myself and some friends: h[ttp://sampleleaderboard.azurewebsites.net](http://sampleleaderboard.azurewebsites.net)
+Here is an example of this website in action using myself and some friends: h[ttp://sampleleaderboard.azurewebsites.net](https://sampleleaderboard.azurewebsites.net)
 
 ![](https://cdn-images-1.medium.com/max/2000/0*wQC_pl8sqXkPcLvR.png)
 
-In order to run your own leader board you will need Python 2 or 3 installed as well as the Flask module; instructions are [here](http://flask.pocoo.org/docs/1.0/installation/).
+In order to run your own leader board you will need Python 2 or 3 installed as well as the Flask module; instructions are [here](https://flask.pocoo.org/docs/1.0/installation/).
 
 With those installed fork and clone this GitHub repo:
 
@@ -33,7 +33,7 @@ Once you’ve populated the tuple with strings of IDs you’re ready to get a fr
 
 Once you have a key go back to your editor and app.py. Line 17 looks like:
 
-    res = requests.get("http://api.stackexchange.com/2.2/users/" + user_id + "?order=desc&sort=reputation&site=stackoverflow&key=INSERT_YOUR_KEY_HERE"
+    res = requests.get("https://api.stackexchange.com/2.2/users/" + user_id + "?order=desc&sort=reputation&site=stackoverflow&key=INSERT_YOUR_KEY_HERE"
 
 Replace INSERT_YOUR_KEY_HERE with the key you just got from Stack Exchange. Save your changes and you should now be able to run the app locally! Run python app.py or flask run from the console and you should see:
 

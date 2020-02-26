@@ -1,4 +1,4 @@
-baseURL = "http://joelguerra.com/"
+baseURL = "https://joelguerra.com/"
 languageCode = "en-us"
 title = "Joel Guerra"
 theme = "ananke"
