@@ -15,7 +15,7 @@ Let’s locate the faulty sensor. It’s right here under the hood up against th
 
 ![View of engine bay with sensor cover circled in red](https://cdn-images-1.medium.com/max/4368/1*200xGCIxPI_uZs28z60vuQ.png)*View of engine bay with sensor cover circled in red*
 
-Here is the [new sensor](http://amzn.to/2OhaL1x) I’ll be installing.
+Here is the [new sensor](https://amzn.to/2OhaL1x) I’ll be installing.
 
 ![new throttle position sensor](https://cdn-images-1.medium.com/max/2444/1*XOIOG4CgBEnOwIq1U4F-8w.png)*new throttle position sensor*
 
@@ -73,4 +73,4 @@ Earlier I breezed over how I determined that I needed a new sensor thanks to a p
 
 ![](https://cdn-images-1.medium.com/max/2604/1*ykHjPMV2oP797JZVHcQwzg.png)
 
-This tool costs $70 and might not be worth it if you don’t work on cars very often. You have two other choices for reading error codes. You can get an [off-brand code reader here on Amazon](http://amzn.to/30g9bEC) for only $20 or you can drive your car to an auto parts store like O’Reilly or AutoZone and they will read the codes for you. If you’d rather not drive your car while it’s exhibiting strange behavior order the code reader I linked!
+This tool costs $70 and might not be worth it if you don’t work on cars very often. You have two other choices for reading error codes. You can get an [off-brand code reader here on Amazon](https://amzn.to/30g9bEC) for only $20 or you can drive your car to an auto parts store like O’Reilly or AutoZone and they will read the codes for you. If you’d rather not drive your car while it’s exhibiting strange behavior order the code reader I linked!

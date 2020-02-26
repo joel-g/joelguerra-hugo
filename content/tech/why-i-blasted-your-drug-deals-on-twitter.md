@@ -14,7 +14,7 @@ I thought about the many times I had filled that out myself with joke descriptio
 
 ## What I did
 
-I wanted to do something creative with this to demonstrate the lack of privacy in Venmo’s default settings. I already run a squad of Twitter bots doing harmless things like [spreading news about the Seattle Mariners](http://twitter.com/reddit_mariners) and giving users the [contact information for their members of congress](http://twitter.com/findyourreps) upon request so another Twitter bot was a natural choice. *I actually don’t care for the term “bot” because it implies some sort of AI when they’re really just running a set of pre-programmed commands on a loop but that’s a discussion for another day.*
+I wanted to do something creative with this to demonstrate the lack of privacy in Venmo’s default settings. I already run a squad of Twitter bots doing harmless things like [spreading news about the Seattle Mariners](https://twitter.com/reddit_mariners) and giving users the [contact information for their members of congress](https://twitter.com/findyourreps) upon request so another Twitter bot was a natural choice. *I actually don’t care for the term “bot” because it implies some sort of AI when they’re really just running a set of pre-programmed commands on a loop but that’s a discussion for another day.*
 
 Anyway, writing a Python script is generally my solution to everything so I slapped together 70 lines of code and made a new Twitter account and let it run. It was automatically tweeting the names of profile pictures of users making “drug” transactions on Venmo. I chose drugs, sex and alcohol keywords as the trigger for the bot because because they were funny and shocking. I removed the last names of users because I didn’t want to actually contribute to the problem of lack of privacy.
 
@@ -22,7 +22,7 @@ Anyway, writing a Python script is generally my solution to everything so I slap
 
 ## What came next…
 
-I tweeted out a link to the new account [*“Who’s buying drugs on Venmo”](http://twitter.com/venmodrugs)* less than 2 hours after Mike’s original tweet that inspired me expecting to get a few laughs from my friends and colleagues and that would be the end of it. I was wrong. Accounts with tens and hundreds of thousands of followers had caught wind of the account and its mentions were blowing up. I braced myself for backlash but the response was overwhelmingly positive.
+I tweeted out a link to the new account [*“Who’s buying drugs on Venmo”](https://twitter.com/venmodrugs)* less than 2 hours after Mike’s original tweet that inspired me expecting to get a few laughs from my friends and colleagues and that would be the end of it. I was wrong. Accounts with tens and hundreds of thousands of followers had caught wind of the account and its mentions were blowing up. I braced myself for backlash but the response was overwhelmingly positive.
 
 ![](https://cdn-images-1.medium.com/max/2000/1*I9qzPSzy6q4OVTd8svJFYQ.png)
 
@@ -38,7 +38,7 @@ By the next morning I had Vice News in my inbox asking for comment. By mid after
 [Joseph Cox](undefined) of Motherboard [wrote](https://motherboard.vice.com/amp/en_us/article/qvmkvx/twitter-bot-venmo-buying-drugs-photo-names):
 > The bot raises questions not only about whether users are truly aware of the sort of data they are exposing by not using certain account settings, but also at which point does already public data qualitatively take on a different meaning or significance when compiled in aggregate and presented in new formats.
 
-[Seung Lee](http://seungylee.tumblr.com/) of San Jose Mercury News [wrote](https://www.mercurynews.com/2018/07/20/venmo-a-friend-about-drugs-or-sex-and-this-twitter-bot-will-rat-you-out/):
+[Seung Lee](https://seungylee.tumblr.com/) of San Jose Mercury News [wrote](https://www.mercurynews.com/2018/07/20/venmo-a-friend-about-drugs-or-sex-and-this-twitter-bot-will-rat-you-out/):
 > The word on the street has always been snitches get stitches. But one tattletale Twitter bot flies right into the age-old adage by disclosing Venmo users who tag their transactions with words or emojis related to drugs — all for the sake of promoting data privacy.
 
 In reading these articles I learned about Hang Do Thi Duc who had recently published [research](https://publicbydefault.fyi/) about Venmo’s ‘public by default’ privacy settings and one of my favorite comments came from [Tristan Greene](https://thenextweb.com/author/tristangreen/) of [TheNextWeb](https://thenextweb.com/artificial-intelligence/2018/07/19/twitter-bots-are-running-amok-with-your-public-venmo-data/):
