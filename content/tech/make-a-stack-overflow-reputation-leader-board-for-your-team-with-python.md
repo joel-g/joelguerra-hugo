@@ -5,8 +5,6 @@ draft: false
 ---
 
 
-# Make a Stack Overflow Reputation Leader Board for your team with Python
-
 If you’re a developer or student you probably have a Stack Overflow account. If you’re as (overly) competitive as I am you probably compare your Stack Overflow reputation with your colleagues. If you’re a real weirdo you might even want a sort-able leader board to compare yourself against your friends, enemies, etc.
 
 Well, look no further than this simple Python Flask application!

@@ -4,9 +4,6 @@ date: 2019-11-24T17:40:55-08:00
 draft: false
 ---
 
-
-# You Should Know How To️: replace an accelerator pedal position sensor
-
 ![2004 Honda Accord outside of a detail shop](https://cdn-images-1.medium.com/max/2064/1*A3hSK-PAXvjlb74c7-i_pA.png)*2004 Honda Accord outside of a detail shop*
 
 This is my 2004 Accord. It has been my daily driver for 6 years. It has 285k miles. Everything works and it’s great — except that lately the throttle has been… weird. It starts jerky and doesn’t cruise at a consistent speed even if I am very smooth with my pedal input. I hooked up my OBD reader (on-board diagnostic reader) to see if I had any error codes. It returned p2138 which indicates a fault with the Accelerator Pedal Position Sensor. This is a kind of expensive part at $125 but at least I know what to replace now. Sometime around 2000 car manufacturers decided that having the gas pedal pull a steel cable to move the throttle plate directly was too simple, cheap and reliable. So they started implementing “fly by wire” which means there is an expensive sensor and electric motor involved now. Not that I’m bitter… Let’s fix it, oh and by the way, links to tools and parts are affiliate links and I may earn from purchases.

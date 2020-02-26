@@ -1,11 +1,9 @@
 ---
-title: "Let's Build a Computer Together"
+title: "Let's Build a Computer Together — the Martin files"
 date: 2019-07-09T00:38:29-08:00
 draft: false
 ---
 
-
-# Let’s build a computer together — the Martin files
 
 In this edition of “the Martin files” I cobbled together Martin’s gigantic twitter thread (with his permission) documenting a complete gaming PC build. This is the highest budget thread to date! Have fun!
 

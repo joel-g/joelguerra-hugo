@@ -5,8 +5,6 @@ draft: false
 ---
 
 
-# Let’s Turbo Charge a Honda CR-V
-
 This is not necessarily a “how to” but more of a “how I did it” because with something this custom there isn’t just one way to do it. This was my journey… oh, and links to parts and tools are affiliate links and I may earn a couple bucks if you buy them.
 
 ![](https://cdn-images-1.medium.com/max/2400/0*3A-qre0HmzPcyoJa.jpg)

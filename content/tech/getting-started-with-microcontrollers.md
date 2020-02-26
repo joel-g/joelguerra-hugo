@@ -1,11 +1,9 @@
 ---
-title: "Getting Started With Microcontrollers"
+title: "Getting Started With Microcontrollers — the Martin files"
 date: 2019-06-16T00:08:14-08:00
 draft: false
 ---
 
-
-# Learning the Hard Way: Microcontrollers for Newbs — the Martin files
 
 My buddy [Martin Castro](https://twitter.com/AMartinCastro) likes to live tweet hardware projects. When he’s done you have a detailed step-by-step guide that anyone can follow along. However, since it’s a Twitter thread it is quickly lost to time. “The Martin Files” is my attempt to capture this content (with his permission) so others can find, read and learn from it in the future. The rest of this article (including the images) will be verbatim from his Twitter thread:
 

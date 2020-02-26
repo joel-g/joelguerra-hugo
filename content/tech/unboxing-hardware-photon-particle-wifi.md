@@ -1,11 +1,9 @@
 ---
-title: "Unboxing Hardware: Photon Particle Wifi"
+title: "Unboxing Hardware: Photon Particle Wifi — the Martin files"
 date: 2019-06-24T00:21:50-08:00
 draft: false
 ---
 
-
-# Unboxing Hardware: Photon Particle Wifi — the Martin files
 
 Here’s another edition of [Martin Castro](https://twitter.com/AMartinCastro) live tweeting hardware and me collecting it all into a single digestible blog post. The rest of this post is direct from Martin’s finger tips here. Enjoy!
 

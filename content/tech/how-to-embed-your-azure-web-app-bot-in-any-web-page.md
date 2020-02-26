@@ -4,9 +4,6 @@ date: 2018-05-27T13:18:41-08:00
 draft: false
 ---
 
-
-# How To: Embed your Azure web app bot in any web page
-
 Embedding an Azure bot in your web page is actually very simple but the Azure portal doesn’t make it obvious how to do this. The portal blade for bots is geared towards developers who are integrating bots into channels like Skype, Facebook Messenger, Slack, SMS, etc but I’ve seen several questions on Stack Overflow asking how to simply slap the bot on a web page - so here you go.
 
 Start by navigating to your bot in the portal and select the Channels blade:

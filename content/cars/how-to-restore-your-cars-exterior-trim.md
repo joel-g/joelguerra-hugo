@@ -4,9 +4,6 @@ date: 2019-07-04T13:27:18-08:00
 draft: false
 ---
 
-
-# Restore Your Car’s Exterior Trim
-
 I’m going to show you how to restore the lower plastic trim on this ‘99 Honda Prelude but the process will be the same on most cars.
 
 Everyone knows that the Honda Prelude is one of humanity’s finest achievements. In terms of engineering, style and heritage it has few rivals — But sadly the last one rolled off the assembly line in 2001. Those of us who own one today have a moral obligation to maintain it.

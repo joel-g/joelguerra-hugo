@@ -4,8 +4,6 @@ date: 2018-05-27T13:27:18-08:00
 draft: false
 ---
 
-# How To: SSH to your Azure Linux VMs with username and password from Windows, Linux or Mac
-
 If you’re looking to generate SSH keys and use them to login to an Azure Linux VM then good on you because that’s the recommended and most secure method to access your VMs. It’s readily documented here in official documentation. However, I’ve seen people asking on forums how to simply connect to a Linux VM hosted in Azure via SSH with a username and password. If that’s you then I assume you have a good reason (like this VM will generally not have ports open to the internet or this is a proof of concept) and this post will detail how.
 
 ## Create the Linux VM

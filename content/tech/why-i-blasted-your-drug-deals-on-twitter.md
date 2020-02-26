@@ -4,8 +4,6 @@ date: 2018-07-20T17:33:20-08:00
 draft: false
 ---
 
-# Why I Blasted Your “Drug” Deals on Twitter
-
 ## How it happened
 
 A couple of days ago Twitter user [Mike Rundle]() tweeted a link for the endpoint to Venmo’s public API. I learned that Venmo’s public by default setting made the details of millions of Venmo transactions publicly available to anyone who cared to look. So I did what any software engineer would do and started digging through the data. I could see the names, Facebook profile pictures, payment types and “message” fields that users filled out when they made a transaction.
