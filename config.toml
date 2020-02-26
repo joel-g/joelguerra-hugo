@@ -1,0 +1,4 @@
+baseURL = "http://joelguerra.com/"
+languageCode = "en-us"
+title = "Joel Guerra"
+theme = "ananke"
