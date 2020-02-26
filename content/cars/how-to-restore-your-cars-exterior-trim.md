@@ -2,6 +2,7 @@
 title: "How To: Restore Your Car’s Exterior Trim"
 date: 2019-07-04T13:27:18-08:00
 draft: false
+tags: ["repair", "honda"]
 ---
 
 I’m going to show you how to restore the lower plastic trim on this ‘99 Honda Prelude but the process will be the same on most cars.
