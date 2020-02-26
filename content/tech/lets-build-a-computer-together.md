@@ -2,6 +2,7 @@
 title: "Let's Build a Computer Together — the Martin files"
 date: 2019-07-09T00:38:29-08:00
 draft: false
+tags: ["hardware", "martin"]
 ---
 
 

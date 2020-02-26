@@ -2,6 +2,7 @@
 title: "Getting Started With Microcontrollers — the Martin files"
 date: 2019-06-16T00:08:14-08:00
 draft: false
+tags: ["hardware", "martin"]
 ---
 
 

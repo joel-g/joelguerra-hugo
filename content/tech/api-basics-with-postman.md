@@ -2,6 +2,7 @@
 title: "API Basics With Postman — the Martin files"
 date: 2019-07-01T00:15:44-08:00
 draft: false
+tags: ["martin", "how-to"]
 ---
 
 This week I’m stealing all of [Martin Castro's](https://twitter.com/AMartinCastro) hardwork from Twitter (with his permission) to bring you his guide on using Postman to consume APIs. This is a great way to test an API before you starting writing code. The rest of this post is straight from Martin’s thread:

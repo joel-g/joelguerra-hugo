@@ -2,6 +2,7 @@
 title: "Make a Stack Overflow Reputation Leader Board for Your Team With Python"
 date: 2018-07-24T17:37:26-08:00
 draft: false
+tags: ["python", "how-to"]
 ---
 
 
