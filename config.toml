@@ -16,7 +16,7 @@ enableRobotsTXT = true
   filename = "sitemap.xml"
 
 [params]
-  favicon = ""
+  favicon = "/favicon.ico"
   description = ""
   facebook = ""
   twitter = "https://twitter.com/joelatwar"
