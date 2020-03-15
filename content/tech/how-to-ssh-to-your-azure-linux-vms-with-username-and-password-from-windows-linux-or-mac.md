@@ -1,5 +1,5 @@
 ---
-title: "How To: SSH to Your Azure Linux Vms With Username and Password From Windows Linux or Mac"
+title: "How To: SSH to Your Azure Linux VMs With Username and Password From Windows, Linux or Mac"
 date: 2018-05-27T13:27:18-08:00
 draft: false
 tags: ["azure", "how-to"]
