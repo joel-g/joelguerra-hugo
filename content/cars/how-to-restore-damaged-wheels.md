@@ -1,8 +1,8 @@
 ---
-title: "How to Restore Damaged Wheels"
+title: "How to: Restore Damaged Wheels"
 date: 2020-03-14T08:58:33-07:00
 draft: false
-tags: ["honda", "crv", "how-to"]
+tags: ["honda", "crv", "repair"]
 ---
 
 Today I’m going to restore these aluminum wheels.
@@ -14,14 +14,16 @@ These are OEM 16” x 7.5" Honda S2000 wheels. They’re made in Japan by Enkei.
 The plan:
 
 🔹Sand the failed clear coat
+
 🔹Fill in the curb gouged edges
+
 🔹Prime, paint and clear coat
 
 Here are the supplies I’ll be using. I’ll include links to each one as I go through the process. If you happen to buy them I may earn a commission.
 
 ![](https://cdn-images-1.medium.com/max/2400/0*R_GCE7Ge1EjzriqS.jpg)
 
-The pair that aren’t poorly painted blue are all chewed up from hitting curbs. I’m going to start by hitting the edges with 1[80 grit sandpaper](https://amzn.to/3cZJgUs).
+The pair that aren’t poorly painted blue are all chewed up from hitting curbs. I’m going to start by hitting the edges with [180 grit sandpaper](https://amzn.to/3cZJgUs).
 
 ![](https://cdn-images-1.medium.com/max/2400/0*yITEqT6KXXWHgG3j.jpg)
 
