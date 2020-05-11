@@ -120,4 +120,4 @@ I, of course, would never run this code because I so deeply respect the importan
 
 * pushing our children on a swing set
 
-But seriously folks, please don’t place your neighbors in [mortal peril](http://policewatch.herokuapp.com/) by forcing them to have face-to-face confrontations with police. It’s not cool.
+But seriously folks, please don't place your neighbors in mortal peril by forcing them to have face-to-face confrontations with police. Social distancing is important but calling police on people is not cool.
