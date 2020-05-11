@@ -2,6 +2,7 @@
 title: "How to Draw a Dick on the City of Bellevue’s “Report a Gathering” Map With Go"
 date: 2020-05-10T12:31:04-07:00
 draft: false
+featured_image: 'https://miro.medium.com/max/1400/1*Pn9mHkjDJwGl0xEnJ_U5SQ.png'
 tags: ["golang", "how-to"]
 ---
 
