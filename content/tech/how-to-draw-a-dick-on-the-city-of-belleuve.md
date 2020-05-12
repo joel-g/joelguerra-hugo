@@ -110,7 +110,7 @@ The last thing we should do with this program is consider rate limiting. We don�
 
 We did it! We have a complete Go program that could create 37 “gathering reports” and use them to draw a big ole dong on the City of Bellevue’s map! You can see the complete code here: [https://github.com/joel-g/form-data-with-go](https://github.com/joel-g/form-data-with-go/blob/master/main.go)
 
-I, of course, would never run this code because I so deeply respect the important job that our local government officials are doing when they restrict our freedoms to prevent such nefarious acts such as:
+I, of course, would never run this code because I so deeply respect the important job that our local government officials are doing when they restrict such nefarious acts such as:
 
 * jogging
 
