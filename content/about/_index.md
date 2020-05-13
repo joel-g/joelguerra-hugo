@@ -10,4 +10,4 @@ I'm a software engineer. I like to work with Azure, Go and Python.
 I get paid to automate stuff, make things resilient, and make things performant.
 In my free time I work on cars. I might write about these things.
 
-I'm not a web developer or a designer. I slapped this website together from a bunch of open source stuff and piled it on a bunch of free PaaS services. Someday it will probably break because of some dependency I don't understand. It might looked messed up on device with your weirdo browser. You can yell at me about it on [Twitter](https://twitter.com/joelatwar).
+I'm not a web developer or a designer. I made this website with a bunch of open source stuff ([Hugo](https://gohugo.io/), [MediumExporter](https://github.com/xdamman/mediumexporter)) and piled it on a stack of free PaaS services ([GitHub](https://github.com), [Netlify](https://www.netlify.com/), [Cloudflare](https://cloudflare.com)). Some day it will probably break because of a dependency I don't understand. It might looked messed up on your device with your weirdo browser. You can yell at me about it on [Twitter](https://twitter.com/joelatwar).
