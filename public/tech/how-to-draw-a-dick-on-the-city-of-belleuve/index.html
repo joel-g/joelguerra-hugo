@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Joel Guerra  | How to Draw a Dick on the City of Bellevue’s “Report Gatherings” Map With Go</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.70.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.1cb140d8ba31d5b2f1114537dd04802a.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    
+
+    
+    
+    <meta property="og:title" content="How to Draw a Dick on the City of Bellevue’s “Report Gatherings” Map With Go" />
+<meta property="og:description" content="The city of Bellevue, Washington recently debuted an online tool to allow residents to report “gatherings” or other violations of Governor Inslee’s “shelter in place” order. Bellevue Police Department plans to make a heat map to identify areas with high concentrations of violations. This guide will walk through how to reverse engineer an API and use Go’s standard library to send form data. We’ll use the “report a gathering” application as the example API." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://joelguerra.com/tech/how-to-draw-a-dick-on-the-city-of-belleuve/" />
+<meta property="article:published_time" content="2020-05-10T12:31:04-07:00" />
+<meta property="article:modified_time" content="2020-05-10T12:31:04-07:00" />
+<meta itemprop="name" content="How to Draw a Dick on the City of Bellevue’s “Report Gatherings” Map With Go">
+<meta itemprop="description" content="The city of Bellevue, Washington recently debuted an online tool to allow residents to report “gatherings” or other violations of Governor Inslee’s “shelter in place” order. Bellevue Police Department plans to make a heat map to identify areas with high concentrations of violations. This guide will walk through how to reverse engineer an API and use Go’s standard library to send form data. We’ll use the “report a gathering” application as the example API.">
+<meta itemprop="datePublished" content="2020-05-10T12:31:04-07:00" />
+<meta itemprop="dateModified" content="2020-05-10T12:31:04-07:00" />
+<meta itemprop="wordCount" content="1406">
+
+
+
+<meta itemprop="keywords" content="golang,how-to," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to Draw a Dick on the City of Bellevue’s “Report Gatherings” Map With Go"/>
+<meta name="twitter:description" content="The city of Bellevue, Washington recently debuted an online tool to allow residents to report “gatherings” or other violations of Governor Inslee’s “shelter in place” order. Bellevue Police Department plans to make a heat map to identify areas with high concentrations of violations. This guide will walk through how to reverse engineer an API and use Go’s standard library to send form data. We’ll use the “report a gathering” application as the example API."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://miro.medium.com/max/1400/1*Pn9mHkjDJwGl0xEnJ_U5SQ.png');">
+    <div class="pb3-m pb6-l bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://joelguerra.com/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Joel Guerra
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="/about page">
+              /about
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/cars/" title="/cars page">
+              /cars
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tech/" title="/tech page">
+              /tech
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+<a href="https://stackoverflow.com/users/8826629/joel-guerra" target="_blank" class="link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Stack Overflow link" rel="noopener" aria-label="follow on Stack Overflow——Opens in a new window">
+  <svg height="32px" 
+    style="enable-background:new 0 0 67 67;"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width="32px"
+>
+    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.869 5.903l3.114 4.567-.975.665-3.115-4.567.976-.665zm-2.812 2.585l4.84 2.838-.6 1.017-4.842-2.838.602-1.017zm-1.276 2.724l5.413 1.521-.291 1.077-5.428-1.458.306-1.14zm-.588 2.461l5.687.569-.103 1.12-5.691-.513.107-1.176zm-.169 2.16h5.835v1.167h-5.835v-1.167zm7.976 3.167h-10v-6h1v5h8v-5h1v6zm.195-8.602l-.945-5.446 1.162-.202.947 5.446-1.164.202z"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+<a href="https://twitter.com/joelatwar" target="_blank" class="link-transition twitter link dib z-999 pt3 pt0-l mr1" title="Twitter link" rel="noopener" aria-label="follow on Twitter——Opens in a new window">
+  <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+<a href="https://linkedin.com/in/joel-g" target="_blank" class="link-transition linkedin link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+<a href="https://github.com/joel-g" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr1" title="Github link" rel="noopener" aria-label="follow on Github——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">How to Draw a Dick on the City of Bellevue’s “Report Gatherings” Map With Go</h1>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        /TECH
+      </aside>
+      
+
+
+
+
+  <div id="sharing" class="mt3">
+
+    
+    <a href="https://www.facebook.com/sharer.php?u=https://joelguerra.com/tech/how-to-draw-a-dick-on-the-city-of-belleuve/" class="facebook no-underline" aria-label="share on Facebook">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+
+    </a>
+
+    
+    
+    <a href="https://twitter.com/share?url=https://joelguerra.com/tech/how-to-draw-a-dick-on-the-city-of-belleuve/&amp;text=How%20to%20Draw%20a%20Dick%20on%20the%20City%20of%20Bellevue%e2%80%99s%20%e2%80%9cReport%20Gatherings%e2%80%9d%20Map%20With%20Go" class="twitter no-underline" aria-label="share on Twitter">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+    </a>
+
+    
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://joelguerra.com/tech/how-to-draw-a-dick-on-the-city-of-belleuve/&amp;title=How%20to%20Draw%20a%20Dick%20on%20the%20City%20of%20Bellevue%e2%80%99s%20%e2%80%9cReport%20Gatherings%e2%80%9d%20Map%20With%20Go" class="linkedin no-underline" aria-label="share on LinkedIn">
+      <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+    </a>
+  </div>
+
+      <h1 class="f1 athelas mt3 mb1">How to Draw a Dick on the City of Bellevue’s “Report Gatherings” Map With Go</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-05-10T12:31:04-07:00">May 10, 2020</time>
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>The city of Bellevue, Washington recently debuted an online tool to allow residents to report “gatherings” or other violations of Governor Inslee’s “shelter in place” order. Bellevue Police Department plans to make a heat map to identify areas with high concentrations of violations. This guide will walk through how to reverse engineer an API and use Go’s standard library to send form data. We’ll use the “report a gathering” application as the example API.</p>
+<p>Oh, and we’re going to draw a dick on the city’s map with reported “gatherings”.</p>
+<p><img src="https://cdn-images-1.medium.com/max/4212/1*GkL2jqF9SAjYUox6puJAZg.png" alt="Screenshot of Bellevue’s website"><em>Screenshot of Bellevue’s website</em></p>
+<p>So, what’s the plan exactly?</p>
+<ol>
+<li>
+<p>We’re going to analyze Bellevue’s website to see how we can submit a “report” with code without clicking around on the page.</p>
+</li>
+<li>
+<p>We’re going to plot the coordinates needed to draw a penis.</p>
+</li>
+<li>
+<p>We’re going to write a program that, if we ran it, would report many, many gatherings such that they would draw a dick on Bellevue PD’s map.</p>
+</li>
+</ol>
+<h2 id="step-1-make-a-report">Step 1: Make a report</h2>
+<p>As always, to see what a website is doing, go to the page and open up the network tab! The site allows you to enter an address, add a description, and optionally add a photo. Instead of an address you can also drag a pointer on the map. I’ll drag the pointer to a park; the page automatically updates with an address when you move the pointer. The page has no warnings about submitting false reports (do not confuse this with a real “police report”) but just so no one thinks this is real and acts on it I’ll add “test report” as the description.</p>
+<p><img src="https://cdn-images-1.medium.com/max/6720/1*oC4GLs8il5Pci76e1rQiUQ.png" alt=""></p>
+<p>Next, if we were to click “Submit”, we would see…</p>
+<p><img src="https://cdn-images-1.medium.com/max/3408/1*u73Kp0rNjWcLMnhdyoLdYQ.png" alt=""></p>
+<p>There would be a flood of activity in the network tab. We’re not interested in images and other assets that get loaded so let’s filter by “XHR” and look for the payload our browser hypothetically would have sent to the server.</p>
+<p><img src="https://cdn-images-1.medium.com/max/2800/1*SmmauL1J3ppRfpOr38oV9Q.png" alt=""></p>
+<p>Right away we see something called “request_submit” that returned a 200. That looks promising! If we drill down we see the request URL (we’ll need that later), the request and response headers and if we scroll down we find the real prize… the format of the form data that would be sent!</p>
+<p><img src="https://cdn-images-1.medium.com/max/3380/1*ercdQCmgp-hz1tQoYAzpSQ.png" alt="Network tab results"><em>Network tab results</em></p>
+<p><img src="https://cdn-images-1.medium.com/max/2452/1*zkQU65DzcI6R2txWh6woWQ.png" alt="Form data"><em>Form data</em></p>
+<p>We can see that the pin drop on the map was translated to latitude and longitude coordinates. That’s going to be really useful when we want to draw a picture later. Armed with this information, let’s head to our editor and write some code to recreate this functionality.</p>
+<p>The first thing we’ll do is store that request URL and make a simple function that will take latitude and longitude coordinates as string arguments.</p>
+<p><img src="https://cdn-images-1.medium.com/max/2576/1*etf3_EBvnWas1Jtz-PdpBA.png" alt=""></p>
+<p>From the form data we got found in the network tab we have values for space_id, client_id, request_type_id. We don’t know exactly what those values mean but since we weren’t logged in or authenticated in any way &ldquo;client_id&rdquo;: &ldquo;954&rdquo; is probably the code for an anonymous report, maybe? And request_type_id almost certainly refers to the “gathering” type of report (Bellevue lets you report other things as well like… Lime Bikes for some reason). Whatever these numbers mean, we’re going to hard code them to match what we saw in our test report.</p>
+<p>What we really care about is the latitude and longitude! We’re going to be using the <a href="https://golang.org/pkg/net/http/#Client.PostForm">PostForm()</a> function from Go’s http package. Since this function takes a <a href="https://golang.org/pkg/net/url/">url.Values</a> type as an argument we’ll have our function return a urls.Values type. This type is based on a map of a string/slice-of-string (map[string][]string) so we can populate our url.Values literal like this, inserting our latitude and longitude values as strings:</p>
+<p><img src="https://cdn-images-1.medium.com/max/2524/1*3sqif7u8XpQr7mbaVEs7tQ.png" alt=""></p>
+<p>Now that we can generate the arguments we need for our HTTP request, let’s fill out the main() function to do just that using the same latitude and longitude from that park earlier. We’re not animals so we’ll check for errors and print any we find, but more importantly we’ll print the HTTP status code we get from our POST request. You can read more about HTTP requests in Go <a href="https://gobyexample.com/http-clients">here</a>.</p>
+<p><img src="https://cdn-images-1.medium.com/max/3112/1*hFaLXuOxiCMmmV9C5cWIeA.png" alt=""></p>
+<p>And if we were to run it…</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*fHoZOmvfKgOGqWI_oCDAPw.png" alt=""></p>
+<p>No errors and a 200 OK response. Nice!</p>
+<p>At this point we’ve written code that (if we were to run it) would create a single “gatherings” report on Bellevue’s website. We did it with a single pair of hard coded of latitude and longitude coordinates but if we want to draw anything we’ll need a list of many coordinates. On to step 2!</p>
+<h2 id="step-2-draw-a-dick-with-latitude-and-longitude-coordinates">Step 2: Draw a dick with latitude and longitude coordinates</h2>
+<p>Google Maps provides many public APIs relating to maps (duh). We’ll use an existing <a href="https://github.com/jeremy-hawes/google-maps-coordinates-polygon-tool">open source project</a> that leverages one of their APIs and allows you draw a polygon on the map and returns a set of coordinates. You can play with the Codepen <a href="https://codepen.io/jhawes/pen/ujdgK">here</a>.</p>
+<p><img src="https://cdn-images-1.medium.com/max/6716/1*J1N8bKG42U9QGCdw3y9PlQ.png" alt=""></p>
+<p>The tool allows you to drag the polygon around the map and add more sides until it becomes… a masterpiece. I’m no graphic artist but if I may say so myself, I think this is a pretty good depiction given the medium. I had to be very careful to draw all the dots within the boundaries of the city’s map.</p>
+<p><img src="https://cdn-images-1.medium.com/max/3292/1*Pn9mHkjDJwGl0xEnJ_U5SQ.png" alt=""></p>
+<p>The Codepen outputs the latitude and longitude coordinates that we’ll need in our Go code. Just for safe keeping, I’ll paste them right here:</p>
+<p>{“47.62266”, “-122.14746”}, {“47.62018”, “-122.15174”}, {“47.61817”, “-122.15405”}, {“47.61615”, “-122.15705”}, {“47.61178”, “-122.16218”}, {“47.60695”, “-122.16971”}, {“47.60096”, “-122.17655”}, {“47.59633”, “-122.18569”}, {“47.5921”, “-122.1864”}, {“47.58649”, “-122.18436”}, {“47.58313”, “-122.17973”}, {“47.57977”, “-122.17097”}, {“47.57843”, “-122.16683”}, {“47.57754”, “-122.16269”}, {“47.57717”, “-122.15372”}, {“47.57715”, “-122.14572”}, {“47.57922”, “-122.13737”}, {“47.58591”, “-122.13304”}, {“47.59462”, “-122.13622”}, {“47.5973”, “-122.1401”}, {“47.59874”, “-122.14784”}, {“47.60208”, “-122.14239”}, {“47.60669”, “-122.13591”}, {“47.61084”, “-122.13012”}, {“47.61355”, “-122.12514”}, {“47.61856”, “-122.11878”}, {“47.62212”, “-122.11054”}, {“47.62575”, “-122.10951”}, {“47.62942”, “-122.1083”}, {“47.63309”, “-122.10779”}, {“47.63536”, “-122.10949”}, {“47.63759”, “-122.11186”}, {“47.63952”, “-122.11729”}, {“47.63689”, “-122.12815”}, {“47.6343”, “-122.13332”}, {“47.62986”, “-122.13643”}, {“47.62634”, “-122.14194”}</p>
+<p>We’ll need to add them as a slice of slices of strings in our Go code too.</p>
+<p><img src="https://cdn-images-1.medium.com/max/4968/1*srTSrCrxzYC0x-TRIYBZiw.png" alt=""></p>
+<h2 id="step-3-finalize-the-script-to-use-the-coords">Step 3: Finalize the script to use the coords</h2>
+<p>The obvious last step is to write a for loop to iterate over the coordinates and “report a gathering” for each coordinate but there’s one last thing missing here… the description. We haven’t come up with a good description. If there is one thing I think government officials, politicians and police officers should frequently read it is the US constitution. Let’s add a constitutional amendment as the description to each report!</p>
+<p>First, we’ll need to gather the first 10 amendments into a slice of strings.</p>
+<p><img src="https://cdn-images-1.medium.com/max/4876/1*bULCM-v5l8Y1xniFGkT9ng.png" alt=""></p>
+<p>Let’s wrap this in a function that will return just one of them randomly. The function Intn() from Go’s rand package takes an integer as an argument and returns a random integer between 0 and that number (non-inclusive of that number). So rand.Intn(10) will give us any number from 0–9.</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*XA7AKbDNzPU407IUHX0lPA.png" alt=""></p>
+<p>It is true that Go’s rand.Intn() doesn’t offer true randomness and every time we run this we’ll get the same “random” numbers in the same order but for our purposes that is just fine. Let’s incorporate our new randomAmmendment() function in our generateReportBody() function from before.</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*V2uiHcAFQwF8_6BZBgx6JA.png" alt=""></p>
+<p>Now that we have a complete reports with coordinates and descriptions we can write the loop. Nothing fancy here, just a loop over the slices of strings:</p>
+<p><img src="https://cdn-images-1.medium.com/max/2416/1*QmFqy9ghDpib9FMg7078Lw.png" alt=""></p>
+<p>The last thing we should do with this program is consider rate limiting. We don’t know what the Bellevue website’s API would do if we were to send all the reports at once but it would be somewhat rude to spam their API like that anyway. A simple solution is to add a sleep timer between each report with time.Sleep(60 * time.Second) . This will make the program wait 1 minute between reports. That does mean the program will run for 36 minutes before it finishes the 37 reports (for the 37 coordinates) but that’s okay.</p>
+<p><img src="https://cdn-images-1.medium.com/max/2380/1*Kg9ejWg8zvuChCLu5NBwvw.png" alt=""></p>
+<h2 id="thats-it">That’s it!</h2>
+<p>We did it! We have a complete Go program that could create 37 “gathering reports” and use them to draw a big ole dong on the City of Bellevue’s map! You can see the complete code here: <a href="https://github.com/joel-g/form-data-with-go/blob/master/main.go">https://github.com/joel-g/form-data-with-go</a></p>
+<p>I, of course, would never run this code because I so deeply respect the important job that our local government officials are doing when they restrict such nefarious acts such as:</p>
+<ul>
+<li>
+<p>jogging</p>
+</li>
+<li>
+<p>biking</p>
+</li>
+<li>
+<p>BBQing</p>
+</li>
+<li>
+<p>pushing our children on a swing set</p>
+</li>
+</ul>
+<p>But seriously folks, please don&rsquo;t place your neighbors in mortal peril by forcing them to have face-to-face confrontations with police. Social distancing is important but calling police on people is not cool.</p>
+<ul class="pa0">
+  
+   <li class="list">
+     <a href="/tags/golang" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">golang</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/how-to" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">how-to</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/tech/api-basics-with-postman/">API Basics With Postman — the Martin files</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/tech/make-a-stack-overflow-reputation-leader-board-for-your-team-with-python/">Make a Stack Overflow Reputation Leader Board for Your Team With Python</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/tech/how-to-ssh-to-your-azure-linux-vms-with-username-and-password-from-windows-linux-or-mac/">How To: SSH to Your Azure Linux VMs With Username and Password From Windows, Linux or Mac</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/tech/how-to-embed-your-azure-web-app-bot-in-any-web-page/">How To: Embed Your Azure Web App Bot in Any Web Page</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://joelguerra.com/" >
+    &copy;  Joel Guerra 2020 
+  </a>
+    <div>
+
+
+<a href="https://stackoverflow.com/users/8826629/joel-guerra" target="_blank" class="link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Stack Overflow link" rel="noopener" aria-label="follow on Stack Overflow——Opens in a new window">
+  <svg height="32px" 
+    style="enable-background:new 0 0 67 67;"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width="32px"
+>
+    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.869 5.903l3.114 4.567-.975.665-3.115-4.567.976-.665zm-2.812 2.585l4.84 2.838-.6 1.017-4.842-2.838.602-1.017zm-1.276 2.724l5.413 1.521-.291 1.077-5.428-1.458.306-1.14zm-.588 2.461l5.687.569-.103 1.12-5.691-.513.107-1.176zm-.169 2.16h5.835v1.167h-5.835v-1.167zm7.976 3.167h-10v-6h1v5h8v-5h1v6zm.195-8.602l-.945-5.446 1.162-.202.947 5.446-1.164.202z"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+<a href="https://twitter.com/joelatwar" target="_blank" class="link-transition twitter link dib z-999 pt3 pt0-l mr1" title="Twitter link" rel="noopener" aria-label="follow on Twitter——Opens in a new window">
+  <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+<a href="https://linkedin.com/in/joel-g" target="_blank" class="link-transition linkedin link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+<a href="https://github.com/joel-g" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr1" title="Github link" rel="noopener" aria-label="follow on Github——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

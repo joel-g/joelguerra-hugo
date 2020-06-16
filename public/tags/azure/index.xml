@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>azure on Joel Guerra</title>
+    <link>https://joelguerra.com/tags/azure/</link>
+    <description>Recent content in azure on Joel Guerra</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 27 May 2018 13:27:18 -0800</lastBuildDate>
+    
+	<atom:link href="https://joelguerra.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How To: SSH to Your Azure Linux VMs With Username and Password From Windows, Linux or Mac</title>
+      <link>https://joelguerra.com/tech/how-to-ssh-to-your-azure-linux-vms-with-username-and-password-from-windows-linux-or-mac/</link>
+      <pubDate>Sun, 27 May 2018 13:27:18 -0800</pubDate>
+      
+      <guid>https://joelguerra.com/tech/how-to-ssh-to-your-azure-linux-vms-with-username-and-password-from-windows-linux-or-mac/</guid>
+      <description>If you’re looking to generate SSH keys and use them to login to an Azure Linux VM then good on you because that’s the recommended and most secure method to access your VMs. It’s readily documented here in official documentation. However, I’ve seen people asking on forums how to simply connect to a Linux VM hosted in Azure via SSH with a username and password. If that’s you then I assume you have a good reason (like this VM will generally not have ports open to the internet or this is a proof of concept) and this post will detail how.</description>
+    </item>
+    
+    <item>
+      <title>How To: Embed Your Azure Web App Bot in Any Web Page</title>
+      <link>https://joelguerra.com/tech/how-to-embed-your-azure-web-app-bot-in-any-web-page/</link>
+      <pubDate>Sun, 27 May 2018 13:18:41 -0800</pubDate>
+      
+      <guid>https://joelguerra.com/tech/how-to-embed-your-azure-web-app-bot-in-any-web-page/</guid>
+      <description>Embedding an Azure bot in your web page is actually very simple but the Azure portal doesn’t make it obvious how to do this. The portal blade for bots is geared towards developers who are integrating bots into channels like Skype, Facebook Messenger, Slack, SMS, etc but I’ve seen several questions on Stack Overflow asking how to simply slap the bot on a web page - so here you go.</description>
+    </item>
+    
+  </channel>
+</rss>

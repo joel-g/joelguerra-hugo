@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Joel Guerra</title>
+    <link>https://joelguerra.com/tags/</link>
+    <description>Recent content in Tags on Joel Guerra</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 10 May 2020 12:31:04 -0700</lastBuildDate>
+    
+	<atom:link href="https://joelguerra.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>golang</title>
+      <link>https://joelguerra.com/tags/golang/</link>
+      <pubDate>Sun, 10 May 2020 12:31:04 -0700</pubDate>
+      
+      <guid>https://joelguerra.com/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>how-to</title>
+      <link>https://joelguerra.com/tags/how-to/</link>
+      <pubDate>Sun, 10 May 2020 12:31:04 -0700</pubDate>
+      
+      <guid>https://joelguerra.com/tags/how-to/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>crv</title>
+      <link>https://joelguerra.com/tags/crv/</link>
+      <pubDate>Sat, 14 Mar 2020 08:58:33 -0700</pubDate>
+      
+      <guid>https://joelguerra.com/tags/crv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>honda</title>
+      <link>https://joelguerra.com/tags/honda/</link>
+      <pubDate>Sat, 14 Mar 2020 08:58:33 -0700</pubDate>
+      
+      <guid>https://joelguerra.com/tags/honda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>repair</title>
+      <link>https://joelguerra.com/tags/repair/</link>
+      <pubDate>Sat, 14 Mar 2020 08:58:33 -0700</pubDate>
+      
+      <guid>https://joelguerra.com/tags/repair/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>turbo</title>
+      <link>https://joelguerra.com/tags/turbo/</link>
+      <pubDate>Tue, 25 Feb 2020 23:40:03 -0800</pubDate>
+      
+      <guid>https://joelguerra.com/tags/turbo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>accord</title>
+      <link>https://joelguerra.com/tags/accord/</link>
+      <pubDate>Sun, 24 Nov 2019 17:40:55 -0800</pubDate>
+      
+      <guid>https://joelguerra.com/tags/accord/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hardware</title>
+      <link>https://joelguerra.com/tags/hardware/</link>
+      <pubDate>Tue, 09 Jul 2019 00:38:29 -0800</pubDate>
+      
+      <guid>https://joelguerra.com/tags/hardware/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>martin</title>
+      <link>https://joelguerra.com/tags/martin/</link>
+      <pubDate>Tue, 09 Jul 2019 00:38:29 -0800</pubDate>
+      
+      <guid>https://joelguerra.com/tags/martin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>prelude</title>
+      <link>https://joelguerra.com/tags/prelude/</link>
+      <pubDate>Thu, 04 Jul 2019 13:27:18 -0800</pubDate>
+      
+      <guid>https://joelguerra.com/tags/prelude/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://joelguerra.com/tags/python/</link>
+      <pubDate>Tue, 24 Jul 2018 17:37:26 -0800</pubDate>
+      
+      <guid>https://joelguerra.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>azure</title>
+      <link>https://joelguerra.com/tags/azure/</link>
+      <pubDate>Sun, 27 May 2018 13:27:18 -0800</pubDate>
+      
+      <guid>https://joelguerra.com/tags/azure/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
