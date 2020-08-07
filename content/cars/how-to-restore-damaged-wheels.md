@@ -3,6 +3,7 @@ title: "How to: Restore Damaged Wheels"
 date: 2020-03-14T08:58:33-07:00
 draft: false
 tags: ["honda", "crv", "repair"]
+featured_image: "https://cdn-images-1.medium.com/max/2000/0*0cYYMxRTQl0vrkfr.jpg"
 ---
 
 Today I’m going to restore these aluminum wheels.
