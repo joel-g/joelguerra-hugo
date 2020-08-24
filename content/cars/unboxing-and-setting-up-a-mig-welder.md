@@ -1,5 +1,5 @@
 ---
-title: "⚙️ Unboxing and Setting Up a Mig Welder 🔧"
+title: "⚙️ Unboxing and Setting Up a MIG Welder 🔧"
 date: 2020-08-21T17:04:10-07:00
 draft: false
 featured_image: "https://cdn-images-1.medium.com/max/2000/0*SPfxqUUBZW3hvq4H.jpg"
