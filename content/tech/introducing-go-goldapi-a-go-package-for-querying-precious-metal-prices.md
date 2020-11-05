@@ -8,7 +8,7 @@ _Photo by [Stanislaw Zarychta](https://unsplash.com/@stahooo) on [Unsplash](http
 
 Would you like to have automation workflows or alerting related to current spot pricing of gold, silver, platinum or palladium? Of course you would! But first you need to grab the price…
 
-Introducing [go-goldapi](https://github.com/joel-g/go-goldapi), a Go package for querying current and historical precious metal prices from goldapi.io. Note: I am the author of the Go package but I have no affiliation with goldapi.io.
+Introducing `go-goldapi`, a Go package for querying current and historical precious metal prices from goldapi.io. Note: I am the author of the Go package ([https://github.com/joel-g/go-goldapi](https://github.com/joel-g/go-goldapi)) but I have no affiliation with [goldapi.io](https://www.goldapi.io).
 
 This API and package can be used to query current and historical prices of gold, silver, platinum and palladium in the following currencies:
 
