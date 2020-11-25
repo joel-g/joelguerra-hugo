@@ -3,6 +3,7 @@ title: "Unboxing and Setting Up a MIG Welder"
 date: 2020-08-21T17:04:10-07:00
 draft: false
 featured_image: "https://cdn-images-1.medium.com/max/2000/0*SPfxqUUBZW3hvq4H.jpg"
+tags: ["welding"]
 ---
 
 I’ve wanted to learn to weld for years and I finally pulled the trigger on a MIG welder. I picked the WeldPro MIG155Gsv. I knew I wanted a MIG and I wanted something that could run on ~110v and ~220v. This was only $300 and good reviews. Let’s see what’s in the box.

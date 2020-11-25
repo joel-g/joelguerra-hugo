@@ -3,6 +3,7 @@ title: "How To: Replace an Accelerator Pedal Position Sensor"
 date: 2019-11-24T17:40:55-08:00
 draft: false
 tags: ["repair", "honda", "accord"]
+featured_image: "https://cdn-images-1.medium.com/max/2444/1*XOIOG4CgBEnOwIq1U4F-8w.png"
 ---
 
 ![2004 Honda Accord outside of a detail shop](https://cdn-images-1.medium.com/max/2064/1*A3hSK-PAXvjlb74c7-i_pA.png)*2004 Honda Accord outside of a detail shop*
