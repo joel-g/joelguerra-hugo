@@ -3,6 +3,7 @@ title: "How to Fix an O2 Sensor Check Engine Light"
 date: 2020-11-25T10:32:14-08:00
 draft: false
 featured_image: "https://cdn-images-1.medium.com/max/2000/1*taAA3MAlVxcua-B_0-PhQA.png"
+images: ["https://cdn-images-1.medium.com/max/2000/1*taAA3MAlVxcua-B_0-PhQA.png"]
 tags: ["honda", "repair", "prelude"]
 ---
 
