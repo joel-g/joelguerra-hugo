@@ -1,5 +1,5 @@
 ---
-title: "How to Convert a Honda B-Series Engine to Coil on Plug"
+title: "How to Convert a Honda B-Series Engine to Coil-on-Plug"
 date: 2020-12-18T18:53:13-08:00
 draft: false
 featured_image: "https://cdn-images-1.medium.com/max/2220/1*GBiTQ-UetSZt0ipH5ytgpg.png"
