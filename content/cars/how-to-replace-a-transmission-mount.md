@@ -3,7 +3,7 @@ title: "How to Replace a Transmission Mount"
 date: 2020-09-30T09:38:46-07:00
 draft: false
 featured_image: "https://miro.medium.com/max/700/0*nEn2Q99YfaC7RPLE.jpg"
-tags: ["repair", "honda", "accord"]
+tags: ["repair", "honda", "accord", "how to"]
 ---
 
 While rooting out the “clunking” sound my 2004 Accord has been making I noticed a very worn looking transmission mount. We can see it is torn in at least 2 places.

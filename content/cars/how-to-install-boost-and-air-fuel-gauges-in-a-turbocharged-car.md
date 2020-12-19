@@ -3,7 +3,7 @@ title: "How To: Install Boost and Air Fuel Gauges in a Turbocharged Car"
 date: 2020-06-16T13:11:35-07:00
 draft: false
 featured_image: 'https://cdn-images-1.medium.com/max/2400/0*2-v4uVCW-Pk_BhAK.jpg'
-tags: ["turbo", "honda", "crv"]
+tags: ["turbo", "honda", "crv", "how to"]
 ---
 
 Today I’m going to install these AEM gauges in my turbo Honda CR-V so I can monitor air pressure in the turbo system and the air/fuel ratio going into my engine.

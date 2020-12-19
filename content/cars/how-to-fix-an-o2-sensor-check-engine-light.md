@@ -4,7 +4,7 @@ date: 2020-11-25T10:32:14-08:00
 draft: false
 featured_image: "https://cdn-images-1.medium.com/max/2000/1*taAA3MAlVxcua-B_0-PhQA.png"
 images: ["https://cdn-images-1.medium.com/max/2000/1*taAA3MAlVxcua-B_0-PhQA.png"]
-tags: ["honda", "repair", "prelude"]
+tags: ["honda", "repair", "prelude", "how to"]
 ---
 
 So the check engine light came on in your car? Don’t ignore it!
