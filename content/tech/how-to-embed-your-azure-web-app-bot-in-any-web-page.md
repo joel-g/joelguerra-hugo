@@ -19,6 +19,6 @@ From the final screen you can “Show” your secret key and use it in the code 
 
 ![](https://cdn-images-1.medium.com/max/2000/1*JQ5wxySbvIbfqZs8WOn1IQ.png)
 
-You can set the size of the <iframe> with ‘width’ and ‘height’ tags or add a class to position and size the frame with CSS and off you go.
+You can set the size of the `<iframe>` with ‘width’ and ‘height’ tags or add a class to position and size the frame with CSS and off you go.
 
 **Note**: This isn’t as secure as using Channels or the REST endpoint because your key will be visible in the DOM to anyone who cares to inspect your web site. This would allow others to embed your bot in their web page which may not be acceptable depending on your use case.
