@@ -9,15 +9,15 @@ Embedding an Azure bot in your web page is actually very simple but the Azure po
 
 Start by navigating to your bot in the portal and select the Channels blade:
 
-![](https://cdn-images-1.medium.com/max/2000/1*g1twn4ISo3MVyRM-hBlPww.png)
+![](/posts/embed-your-Azure-web-app-bot-in-any-web-page/1.png)
 
 Ignore the many channels offered and choose “Get bot embed codes” and on the next screen choose “ Click here to open the Web Chat configuration page”.
 
-![](https://cdn-images-1.medium.com/max/2324/1*DfrBjvg_bIB37u8gMTIBJw.png)
+![](/posts/embed-your-Azure-web-app-bot-in-any-web-page/2.png)
 
 From the final screen you can “Show” your secret key and use it in the code snippet supplied to embed your bot in any web page.
 
-![](https://cdn-images-1.medium.com/max/2000/1*JQ5wxySbvIbfqZs8WOn1IQ.png)
+![](/posts/embed-your-Azure-web-app-bot-in-any-web-page/3.png)
 
 You can set the size of the `<iframe>` with ‘width’ and ‘height’ tags or add a class to position and size the frame with CSS and off you go.
 
