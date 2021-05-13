@@ -10,7 +10,7 @@ You did it! You made the decision to bring your 90’s Honda into the 21st centu
 
 This guide will show you step by step how to modify your factory gauge cluster to accept your shiny new digital dash. I am modifying the cluster from a 1990 CRX Si but the process will be largely the same for most 80’s or 90’s Hondas. I am installing a [Link MXS Strada 5"](https://ae-race.com/collections/digital-dashes/products/link-mxs-strada-5-dash-street-edition) (which shares the same foot print as an AIM MXS Strada). I got the Link dash from [AE-RACE.com](https://ae-race.com) where the entire Link line is available.
 
-This permanently destroys the original gauge cluster so either use a spare cluster or be prepared to live with the consequences. Watch my [YouTube video](https://www.youtube.com/watch?v=') below to see the finished product before you begin.
+This permanently destroys the original gauge cluster so either use a spare cluster or be prepared to live with the consequences. Watch my [YouTube video](https://www.youtube.com/watch?v=vCfNpVVKYl4) below to see the finished product before you begin.
 
 {{< youtube vCfNpVVKYl4 >}}
 
@@ -60,7 +60,7 @@ Get the idea?
 
 ![](https://cdn-images-1.medium.com/max/2220/0*6ug7Q0PAlWAohdHi)
 
-The plate from [@racedashsolution](https://www.instagram.com/racedashsolution/) is a perfect fit for aCRX.
+The plate from [@racedashsolution](https://www.instagram.com/racedashsolution/) is a perfect fit for a CRX.
 
 ![](https://cdn-images-1.medium.com/max/2220/0*ece7tci09j0IEicb)
 
