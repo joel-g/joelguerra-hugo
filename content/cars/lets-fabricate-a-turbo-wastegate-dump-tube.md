@@ -1,5 +1,5 @@
 ---
-title: "Lets Fabricate a Turbo Wastegate Dump Tube"
+title: "Let's Fabricate a Turbo Wastegate Dump Tube"
 date: 2020-11-15T15:50:26-08:00
 draft: false
 tags: ["turbo", "honda", "crv", "welding"]
