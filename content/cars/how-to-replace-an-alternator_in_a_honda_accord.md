@@ -7,7 +7,7 @@ tags: ["honda", "accord", "repair", "how to"]
 ---
 
 
-If you find that your car won’t start, and after you jump start it the car immediately dies when removed from the jump source (jump box or another car) then you probably need a new alternator. Your alternator isn’t providing enough power to run the car and charge the battery. This guide will follow a 2004 Honda Accord V6. The process will be very similar for most cars, especially other Hondas but the bolt sizes and locations will vary.
+If you find that your car won’t start, and after you jump start it the car immediately dies when removed from the jump source (jump box or another car), then you probably need a new alternator. Your alternator isn’t providing enough power to run the car and charge the battery. This guide will follow a 2004 Honda Accord V6. The process will be very similar for most cars, especially other Hondas but the bolt sizes and locations will vary.
 
 ![](https://cdn-images-1.medium.com/max/3948/0*d3qLhu4G4iaENqnH)
 
