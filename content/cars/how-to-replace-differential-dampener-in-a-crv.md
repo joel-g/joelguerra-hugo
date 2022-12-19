@@ -21,4 +21,4 @@ Get under your car, bring a 17mm socket wrench with you. In the video I used a [
 
 You're done! 
 
-Now watch the video because I want to the effort of attaching a GoPro to the underside of my CR-V.
+Now watch the video because I went to the effort of attaching a GoPro to the underside of my CR-V.
