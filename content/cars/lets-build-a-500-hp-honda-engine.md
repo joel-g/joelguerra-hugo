@@ -3,281 +3,281 @@ title: "Let's Build a 500 Horsepower Honda Engine"
 date: 2021-04-11T12:17:03-07:00
 draft: false
 tags: ["crx", "honda", "engine"]
-featured_image: "https://miro.medium.com/max/1400/0*wazcwHYNRY8bYSgh.jpg"
+featured_image: "/img/500hp-engine/5.jpeg"
 ---
 
 This is going be a long one. You and I are going to start-to-finish build a 1.8 liter Honda B-series engine for 500hp.
 
-![](https://cdn-images-1.medium.com/max/2000/0*AplyxMoXSZmHpghg.jpg)
+![](/img/500hp-engine/1.jpeg)
 
 The block we’ll be using is from a B18A1 which is a 1.8 liter 4 cylinder that came in 90–93 non-VTEC Acura Integras. It originally made 130hp.
 
-![](https://cdn-images-1.medium.com/max/2000/0*M1RV_fQmQBjLLddp.jpg)
+![](/img/500hp-engine/2.jpeg)
 
 The cylinder head we’ll be using is a PR3 VTEC head that originally was part of a B18C5 which came in a 94–01 Acura Integra Type R. That engine originally made 180hp.
 
-![](https://cdn-images-1.medium.com/max/2000/0*0bRDGRy7FrctwO3h.jpg)
+![](/img/500hp-engine/3.jpeg)
 
 So how on earth are these two components going to combine for a 500hp engine? We’re going to rebuild it with forged parts and throw a ton of boost at it. If you’ve seen my turbo CR-V build, I turbocharged a stock B20Z2 (very similar engine but 2.0 instead of 1.8). Because that engine (in the C-RV) was using it’s original factory pistons, rods, rings and bearings I only did a modest 8lb boost turbo system. It makes maybe 200hp, a good 60hp over its original configuration.
 
-![](https://cdn-images-1.medium.com/max/2000/0*bkISCLEbvGYvqNU2.jpg)
+![](/img/500hp-engine/4.jpeg)
 
 Before we can build this engine we need to have this block machined at a machine shop. And before we can do that we need to strip it down to the bare block. No pistons, no crank, no accessories, nothing.
 
-![](https://cdn-images-1.medium.com/max/2000/0*wazcwHYNRY8bYSgh.jpg)
+![](/img/500hp-engine/5.jpeg)
 
 We won’t be reusing the water pump and tensioner so they are trash.
 
-![](https://cdn-images-1.medium.com/max/2000/0*NMjqNRTYzJN_fPKC.jpg)
+![](/img/500hp-engine/6.jpeg)
 
 As we remove bolts I’m putting everything in labeled bags.
 
-![](https://cdn-images-1.medium.com/max/2000/0*TN0l-aViz4QGUQBg.jpg)
+![](/img/500hp-engine/7.jpeg)
 
 And carefully organizing anything we *might* reuse.
 
-![](https://cdn-images-1.medium.com/max/2000/0*hRF4UlTqS2DgqZr9.jpg)
+![](/img/500hp-engine/8.jpeg)
 
 Here is the block with the oil pan off so we can remove all the piston and rod hardware.
 
-![](https://cdn-images-1.medium.com/max/2000/0*KH-s3AlXgRUhOL-I.jpg)
+![](/img/500hp-engine/9.jpeg)
 
 Pistons (and crank) out for Harambe.
 
-![](https://cdn-images-1.medium.com/max/2792/1*F8fLZzIOKKjGFkDxY3dVsg.png)
+![](/img/500hp-engine/10.png)
 
 Now that this engine block is completely bare it is ready to be dropped off at the machine shop for “hot tanking”. Hot tanking is a way to really clean used engine blocks by soaking them in hot caustic water for many hours.
 
-![](https://cdn-images-1.medium.com/max/2000/0*-nDrfZ8E2Q-Tyw1Q.jpg)
+![](/img/500hp-engine/11.jpeg)
 
 By now you may be wondering what this build is for. It’s going into my 1990 CRX Si. The CRX currently has a 130hp B20B engine, which is from first generation JDM CR-V.
 
-![](https://cdn-images-1.medium.com/max/2000/0*WIiWHK6VUKgQikjf.jpg)
+![](/img/500hp-engine/12.jpeg)
 
 We’ve also removed the intake manifold and cams from the cylinder head because it’s going to the machine shop too to be honed and decked.
 
-![](https://cdn-images-1.medium.com/max/2000/0*7THmNmZaJvFPDbxI.jpg)
+![](/img/500hp-engine/13.jpeg)
 
 Everything is ready to be dropped off at the machine shop, including the crankshaft which will be polished.
 
-![](https://cdn-images-1.medium.com/max/2000/0*DvhYGHKIwJeEba1v.jpg)
+![](/img/500hp-engine/14.jpeg)
 
 A few days later we have my parts back from the machine shop and it’s time to get started on the internals.
 
-![](https://cdn-images-1.medium.com/max/2000/0*uBAlVLG3xmIL4zsX.jpg)
+![](/img/500hp-engine/15.jpeg)
 
 With this many new parts it’s important to lay everything out in an organized manner.
 
-![](https://cdn-images-1.medium.com/max/2000/0*CD28rScZkhbthmDU.jpg)
+![](/img/500hp-engine/16.jpeg)
 
 We’ll start with the pistons. We’re using 81.5mm forged pistons with 85lb springs by JE pistons. Using forged instead of cast pistons is a big part of why we’ll be able to make big power that we can’t make (safely) in the CR-V with OEM internals.
 
 The first step of new pistons is getting this wrist pin rings installed.
 
-![](https://cdn-images-1.medium.com/max/2776/1*kJ0KLOFLyMSiPaoHaqx6tg.png)
+![](/img/500hp-engine/17.png)
 
 Then the JE wrist pin and the Skunk2 connecting rod goes into the forged JE piston. The [Skunk2 Alpha series rods](https://amzn.to/2RrtGKV) are forged from chromoly steel and are much stronger and can hold much more power than factory rods. They include forged rod bolts by ARP.
 
-![](https://cdn-images-1.medium.com/max/2000/0*83s7nuFL7wmQbrzN.jpg)
+![](/img/500hp-engine/18.jpeg)
 
 With the wrist pin through the piston and the rod we can put a ring on the other side to hold it in place.
 
-![](https://cdn-images-1.medium.com/max/2000/0*oQD-tQ-mNKrOBMNM.jpg)
+![](/img/500hp-engine/19.jpeg)
 
 Now these piston rings need to be gapped properly to fit in the engine exactly.
 
-![](https://cdn-images-1.medium.com/max/2000/0*FsyPNkjfhvPaWY0j.jpg)
+![](/img/500hp-engine/20.jpeg)
 
 A fitment test at this point is unnecessary but satisfying.
 
-![](https://cdn-images-1.medium.com/max/4000/0*N-V55il3txtajkbU)
+![](/img/500hp-engine/21.jpeg)
 
 The rings need to be filed and gapped *for boost* as this will be a turbo application.
 
-![](https://cdn-images-1.medium.com/max/2000/0*1oiKMMd3gMiw2WyV.jpg)
+![](/img/500hp-engine/22.jpeg)
 
 With all the rings gapped and the pistons and rods assembled we can set these aside for a moment and prepare the block.
 
-![](https://cdn-images-1.medium.com/max/2000/0*YMWi1Ddz0Mgcx3zD.jpg)
+![](/img/500hp-engine/23.jpeg)
 
 Before the pistons can go in we need to install the polished crank shaft.
 
-![](https://cdn-images-1.medium.com/max/2000/0*0mjCsV0A3hHyubHw.jpg)
+![](/img/500hp-engine/24.jpeg)
 
 Before we can actually put this in the block we need to install new bearings. We’ll be using these [King crank bearings](https://amzn.to/3uL0QmT). They’re nice.
 
-![](https://cdn-images-1.medium.com/max/2000/0*3_wii1uJ4ZTraBhC)
+![](/img/500hp-engine/25.jpeg)
 
 With the engine block upside down the bearings lock into place thanks to the little notches cut in one end. Oil these with fresh clean oil when you install them.
 
-![](https://cdn-images-1.medium.com/max/2000/0*N-nNy9L-V8OpE7TA.jpg)
+![](/img/500hp-engine/26.jpeg)
 
 Then the crankshaft drops right into place.
 
-![](https://cdn-images-1.medium.com/max/2000/0*KaYb1C17jInx1Me9.jpg)
+![](/img/500hp-engine/27.jpeg)
 
 We’ll be reusing the old main caps and bolts but we cleaned them up with [brake parts cleaner](https://amzn.to/32635VO).
 
-![](https://cdn-images-1.medium.com/max/2000/0*Zk5oHBNylEJDz6uk.jpg)
+![](/img/500hp-engine/28.jpeg)
 
 With the other half of the crank bearings installed into the main caps we can place the caps on the crank and torque them in to the block.
 
-![](https://cdn-images-1.medium.com/max/2000/0*83WfJFGa1ugZv4PI.jpg)
+![](/img/500hp-engine/29.jpeg)
 
 With the crank secured we can come back to the pistons and rods. These oil rings need to be installed in the bottom ring slot of the piston.
 
-![](https://cdn-images-1.medium.com/max/2000/0*yqAPs88ke1h1ERoS.jpg)
+![](/img/500hp-engine/30.jpeg)
 
 Connecting rods need bearings as well. I’m using these Mahle performance bearings. They just click into the end of the rod and rod cap.
 
-![](https://cdn-images-1.medium.com/max/2000/0*0B3Ccpis3u2_VSYU.jpg)
+![](/img/500hp-engine/31.jpeg)
 
 The rings we filed earlier can go in their slots now.
 
-![](https://cdn-images-1.medium.com/max/2700/1*V4dOcDuhuya7-82c1FPeMQ.png)
+![](/img/500hp-engine/32.png)
 
 We’ll compress the rings using this aptly named “[piston ring compressor](https://amzn.to/3saK7aW)”. It’s tapered so you can push the piston in from one side and as you keep pushing the piston in the rings become compressed.
 
-![](https://cdn-images-1.medium.com/max/2488/1*hjm5aqfDp99aR_P7snKOMA.png)
+![](/img/500hp-engine/33.png)
 
 With the compressor still on we push the pistons into the cylinders.
 
-![](https://cdn-images-1.medium.com/max/2000/0*nDcJ-Zt8wb7ttkNu.jpg)
+![](/img/500hp-engine/34.jpeg)
 
 How nice does that look? Note: JE marks the intake side with “INT”. It’s important to not install your pistons backwards as intake valves are bigger than exhaust valves. As you can see here, the valve cut outs in the top of the piston on the intake side are bigger.
 
-![](https://cdn-images-1.medium.com/max/2000/0*q_msEw1gxeeYI8Yf.jpg)
+![](/img/500hp-engine/35.jpeg)
 
 Flip the block back over and install the rod caps (with bearings in them) while adding oil at every step.
 
-![](https://cdn-images-1.medium.com/max/2000/0*OgPnBolgF_kEc_xA.jpg)
+![](/img/500hp-engine/36.jpeg)
 
 And torque down these fancy forged ARP rod bolts.
 
-![](https://cdn-images-1.medium.com/max/2000/0*s3PSls-f71aKcJVg.jpg)
+![](/img/500hp-engine/37.jpeg)
 
 Since the block is upside down and the internals are installed this is a good time to take care of the oil pan and related parts. We’ll start with the oil pan baffle (this is the original one that came out when we disassembled the engine.
 
-![](https://cdn-images-1.medium.com/max/2000/0*Ysw-RV6erjDmRvpk.jpg)
+![](/img/500hp-engine/38.jpeg)
 
 Before fitting the oil pan gasket we need grey goo. You may remember this [Permatex gasket maker](https://amzn.to/3a1LlPU) from the CR-V build.
 
-![](https://cdn-images-1.medium.com/max/2000/0*B193S5Ksa8zdZU1n.jpg)
+![](/img/500hp-engine/39.jpeg)
 
 If you’ve ever wondered what a $50 oil pan gasket looks like, here is a rubber/metal/rubber sandwich Felpro oil pan gasket.
 
-![](https://cdn-images-1.medium.com/max/2000/0*PkTMSBb5lvrjhFj8.jpg)
+![](/img/500hp-engine/40.jpeg)
 
 We’re going to be generating significant crank pressure at high RPM so this job calls for more goo.
 
-![](https://cdn-images-1.medium.com/max/2000/0*cG8vuEM_m_lvDUac.jpg)
+![](/img/500hp-engine/41.jpeg)
 
 I happen to have this [Moroso oil pan](https://amzn.to/326fJnK) that we’ll use instead of the original oil pan. This is an important upgrade because it has bungs for oil lines that will be needed for the turbocharger. I’m using brand new M6x1.0 bolts to install it.
 
-![](https://cdn-images-1.medium.com/max/2000/0*1AielaoXh2gfio8s.jpg)
+![](/img/500hp-engine/42.jpeg)
 
 For added style points I’m using this purple magnetic oil plug bolt.
 
-![](https://cdn-images-1.medium.com/max/2000/0*C99_6Tl_GzCebkut)
+![](/img/500hp-engine/43.jpeg)
 
 With the oil pan installed and the plug in we can flip the engine over start sticking the OEM bits back on the block that came off for hot tanking. Like this ugly coolant tube and hose.
 
-![](https://cdn-images-1.medium.com/max/2000/0*e1ec1phitc3u_EQB.jpg)
+![](/img/500hp-engine/44.jpeg)
 
 The new [Gates timing belt kit](https://amzn.to/2Qdij8S) came with a new water pump and gasket so let’s prepare those.
 
-![](https://cdn-images-1.medium.com/max/2496/1*nQ2gqkeasuSQHHISetSWTQ.png)
+![](/img/500hp-engine/45.png)
 
 Next install the water pump, tensioner and crank gear. The new tensioner also came with the timing belt kit.
 
-![](https://cdn-images-1.medium.com/max/2000/0*mX1M1loKcd9ANxpZ.jpg)
+![](/img/500hp-engine/46.jpeg)
 
 And sneakily re-install the original crank cover even those it’s kind of blocked by the engine stand.
 
-![](https://cdn-images-1.medium.com/max/2000/0*sBUg_HQdysEZ4Vj_.jpg)
+![](/img/500hp-engine/47.jpeg)
 
 I don’t fully trust the 25+ year old head bolt threads in this aluminum block so we’re going to install new [Time-Sert steel threads](https://amzn.to/322DEV2). This requires drilling out the threads, so in order to not drop any debris into our new engine we’ll tape off everything but the thread holes. Could we have done this *before* installing the pistons? Yeah, but here we are.
 
-![](https://cdn-images-1.medium.com/max/2000/0*P8fD6_vvDjMFGi-V.jpg)
+![](/img/500hp-engine/48.jpeg)
 
 Replacing these threads isn’t strictly necessary but the Time-Serts are cheap, so if you happen to have the tools (which are not cheap) it’s not a bad idea. “The tools” is this [head bolt thread repair kit](https://amzn.to/3s6Yz3J). We’ll carefully drill out the threads while using a shop vac to suck away the metal as it comes off.
 
-![](https://cdn-images-1.medium.com/max/2400/0*Lb46QgJh-mSWuHEI.jpg)
+![](/img/500hp-engine/49.jpeg)
 
 We’ll be replacing them with these much stronger [steel threads](https://amzn.to/322DEV2). We’ll need to tap the freshly drilled holes match the Time-Serts using the tap in the kit.
 
-![](https://cdn-images-1.medium.com/max/2232/1*qwD4QAECBZetCzhj96v3yw.png)
+![](/img/500hp-engine/50.png)
 
 A lot of effort later they’re all drilled, tapped and threaded and ready for the head.
 
-![](https://cdn-images-1.medium.com/max/2156/1*Tt_Wyn4PNep1tKrrcYwrnA.png)
+![](/img/500hp-engine/51.png)
 
 Now that the block is done, let’s talk about the cylinder head and the new parts we’ll be using. We won’t be reusing the old valve train, instead we’re installing [Supertech K20A2 titanium retainers and springs](https://www.supertechperformance.com/p17850-sprk-h1019d-dual-valve-spring-kit). These little guys are pretty expensive ($564) but are an essential upgrade if we want to be able to rev past 9,000 RPM (and we do). Our goal red line is going to be 9,500.
 
-![](https://cdn-images-1.medium.com/max/2220/1*ZIsR7JJPxL5QHVYSRM4-xA.png)
+![](/img/500hp-engine/52.png)
 
 Instead of the factory camshafts and gears we'll use [Brian Crower Stage 2 cam shafts](https://amzn.to/3dSNNJB) and [Skunk2 Pro Series adjustable cam gears](https://amzn.to/2QfGHqe). These upgrades aren’t strictly necessary (unlike the forged internals) and they aren’t cheap either but every bit of horsepower we can squeeze out of the engine (before throwing boost at it) helps build a more reliable/tune-able engine.
 
-![](https://cdn-images-1.medium.com/max/2400/0*umA5T8aUxztj170_.jpg)
+![](/img/500hp-engine/53.jpeg)
 
 To install the new springs and retainers (and later the cam shafts) we need to remove all the original springs first using this precision tool and a hammer.
 
-![](https://cdn-images-1.medium.com/max/2000/0*NfY4jKkcTAj84ILV.jpg)
+![](/img/500hp-engine/54.jpeg)
 
 You place the socket over the retainer and whack the extension with a hammer and the retainer “keeps” just pop out. All these OEM springs and retainers can go in the recycling bin now.
 
-![](https://cdn-images-1.medium.com/max/2000/0*J3orkA3IrKcCBW3e.jpg)
+![](/img/500hp-engine/55.jpeg)
 
 However we do need to reuse these keeps that hold the retainers on the valves stems.
 
-![](https://cdn-images-1.medium.com/max/2000/0*Vtz6_THJqmBOD4yz.jpg)
+![](/img/500hp-engine/56.jpeg)
 
 The keeps go on the end of the valves like this. This is an extra valve that was laying around so I could demonstrate how they fit. The Type R cylinder head I scored had [Ferrea Racing 6000 Competition Series valves](https://www.ferrea.com/honda-6000-series-competition-valves/p503) already installed so I’m leaving them in, saving some time and about $400.
 
-![](https://cdn-images-1.medium.com/max/2216/1*C09jQpqalowUHUdaBdK1ew.png)
+![](/img/500hp-engine/57.png)
 
 Here’s how they go in the retainer and spring. The tapered keeps magically keep everything in place.
 
-![](https://cdn-images-1.medium.com/max/2400/0*Ozpr_1Ha7obI--WP.jpg)
+![](/img/500hp-engine/58.jpeg)
 
 In order to install these we need to compress the springs over the valves and then install the keeps. We’ll use this [valve spring compressor](https://amzn.to/3mD2e8i). This tool is cheap and definitely worth picking up for this job.
 
-![](https://cdn-images-1.medium.com/max/2400/0*CT_LV60Ros07Gw-l.jpg)
+![](/img/500hp-engine/59.jpeg)
 
 It installs onto the cylinder head like this. Turning that bolt will compress the spring below.
 
-![](https://cdn-images-1.medium.com/max/2000/0*MZXMCcD0_vaYBF9_.jpg)
+![](/img/500hp-engine/60.jpeg)
 
 With the spring compressed you now get to play operation with the keeps and a magnetic screw driver
 
-![](https://cdn-images-1.medium.com/max/2000/0*vVN4Fzw3kIN8EBiF.jpg)
+![](/img/500hp-engine/61.jpeg)
 
 Tweezers also are helpful. As is adding grease to the keeps and using that to help you stick the keeps to the end of the valve.
 
-![](https://cdn-images-1.medium.com/max/2000/0*uCWjU8iQ9cPXZqHi.jpg)
+![](/img/500hp-engine/62.jpeg)
 
 Once you have the keeps in the notch of the valve stem like this you can back off the spring compressor. Use a screwdriver to guide the retainer left or right so the keeps are centered. This usually takes a few tries.
 
-![](https://cdn-images-1.medium.com/max/2000/0*anyOxbRWW3Zr02TG.jpg)
+![](/img/500hp-engine/63.jpeg)
 
 Now do it 16 times.
 
-![](https://cdn-images-1.medium.com/max/2000/0*JIHIrsV0MRcoeqPX.jpg)
+![](/img/500hp-engine/64.jpeg)
 
 With the springs and retainers installed we can place the new head gasket (somehow I didn’t get a picture of that step) and drop the cylinder head on the block and install the [ARP head studs](https://amzn.to/3s4L0Sp). It may not feel great paying $200 for 10 bolts but forged head studs are very important for pushing big power out of these small engines and ARP is the standard everyone uses. Head studs have very specific torque requirements and need to be torqued in steps so be sure to research that for your specific application.
 
-![](https://cdn-images-1.medium.com/max/2220/0*tAcBjinK_zL5f-5O)
+![](/img/500hp-engine/65.jpeg)
 
 With all the head studs properly installed we can simply drop in the camshafts and secure them with the original cam covers and bolts. Remember when we carefully labeled all the bags as we removed all these bolts?
 
-![](https://cdn-images-1.medium.com/max/2000/0*6d481LbmmQsMa9ZE.jpg)
+![](/img/500hp-engine/66.jpeg)
 
 Next install the Skunk2 adjustable cam gears. Don’t forget the woodruff key and to mark your timings with a paint pen. Setting the timing could be an entire blog post (and probably is somewhere).
 
-![](https://cdn-images-1.medium.com/max/2000/0*sW055tiAP2L2FDJB.jpg)
+![](/img/500hp-engine/67.jpeg)
 
 Put the cam gear center bolts in, wrap the Gates timing belt around them and slap the nearest valve cover on and we’ve got an engine!
 
-![](https://cdn-images-1.medium.com/max/2220/0*ifSYe-ZI0CP4ZlC7)
+![](/img/500hp-engine/68.jpeg)
 
 In the title I promised a 500 horse power engine, didn’t I? Well, as this engine is built it is capable of over 700 horsepower with the right turbo system. If we install it naturally aspirated we might get 200–220 horsepower depending on the intake, exhaust and ECU we use. My goal is to reliably run at 500 horsepower. Stay tuned for future articles when we install this engine in the CRX, turbocharge it and eventually convert the CRX to all-wheel-drive!
