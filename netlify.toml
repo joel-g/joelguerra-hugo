@@ -14,3 +14,15 @@
   for = "/*.jpg"
   [headers.values]
     Cache-Control = "public, s-max-age=604800"
+[[headers]]
+  for = "/tech/*"
+  [headers.values]
+    Cache-Control = "public, s-max-age=604800"
+[[headers]]
+  for = "/cars/*"
+  [headers.values]
+    Cache-Control = "public, s-max-age=604800"
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "public, s-max-age=604800"
