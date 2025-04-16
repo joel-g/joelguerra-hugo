@@ -5,8 +5,6 @@ draft: false
 tags: ["honda"]
 ---
 
-# How the Coolant Overflow Reservoir Works in a Honda Engine
-
 If you've ever popped the hood of your Honda, you've likely noticed the semi-transparent plastic container labeled "coolant" or "engine coolant." This unassuming component is called the coolant overflow reservoir (also known as the coolant expansion tank or recovery tank), and it plays a crucial role in your Honda's cooling system. Today, I'll explain how this simple yet effective system works and why it's important to keep an eye on it.
 
 ## The Purpose of the Coolant Overflow Reservoir
