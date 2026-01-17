@@ -53,7 +53,7 @@ A typical aftermarket oil cooler setup includes:
 
 - **AN fittings and lines**: Braided stainless steel lines with AN fittings are the standard for performance applications.
 
-- **Thermostat (optional but recommended)**: Allows oil to bypass the cooler until it reaches operating temperature, ensuring faster warm-up.
+- **Thermostat (optional but ideal)**: Allows oil to bypass the cooler until it reaches operating temperature, ensuring faster warm-up.
 
 ## Benefits of Installing an Oil Cooler
 
@@ -99,4 +99,4 @@ In the video below I explain how an oil cooler works and show you the components
 
 An engine oil cooler is a straightforward upgrade that can make a real difference in protecting your engine, especially if you're building power or driving hard. Understanding how oil cooling works helps you make informed decisions about whether it's a worthwhile addition to your build.
 
-If you're running a turbocharged Honda or any high-performance engine that sees regular hard use, an oil cooler should be on your list of supporting modifications. It's one of those upgrades that quietly does its job, keeping your oil at the right temperature so you can focus on enjoying the drive.
+If you're running a turbocharged Honda or any high-performance engine that sees regular hard use, an oil cooler should considered be on your list of supporting modifications. It's one of those upgrades that quietly does its job, keeping your oil at the right temperature so you can focus on enjoying the drive.
