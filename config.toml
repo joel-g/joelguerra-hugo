@@ -18,8 +18,9 @@ enableRobotsTXT = true
   filename = "sitemap.xml"
 
 [params]
+  env = "production"
   favicon = "favicon.ico"
-  description = ""
+  description = "Joel Guerra - Software engineer and Honda enthusiast. Tutorials on car modifications, turbo builds, and software development."
   facebook = ""
   twitter = "https://twitter.com/joelatwar"
   instagram = "https://www.instagram.com/joelatwar"
