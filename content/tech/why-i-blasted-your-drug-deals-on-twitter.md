@@ -17,15 +17,15 @@ I wanted to do something creative with this to demonstrate the lack of privacy i
 
 Anyway, writing a Python script is generally my solution to everything so I slapped together 70 lines of code and made a new Twitter account and let it run. It was automatically tweeting the names of profile pictures of users making “drug” transactions on Venmo. I chose drugs, sex and alcohol keywords as the trigger for the bot because because they were funny and shocking. I removed the last names of users because I didn’t want to actually contribute to the problem of lack of privacy.
 
-![Screenshot of the Twitter account](https://cdn-images-1.medium.com/max/2000/1*1bAIy-evLkrEsucD6A-L8g.png)*Screenshot of the Twitter account*
+![Screenshot of the Twitter account](/img/why-i-blasted-your-drug-deals-on-twitter/1.png)*Screenshot of the Twitter account*
 
 ## What came next…
 
 I tweeted out a link to the new account [*“Who’s buying drugs on Venmo”](https://twitter.com/venmodrugs)* less than 2 hours after Mike’s original tweet that inspired me expecting to get a few laughs from my friends and colleagues and that would be the end of it. I was wrong. Accounts with tens and hundreds of thousands of followers had caught wind of the account and its mentions were blowing up. I braced myself for backlash but the response was overwhelmingly positive.
 
-![](https://cdn-images-1.medium.com/max/2000/1*I9qzPSzy6q4OVTd8svJFYQ.png)
+![](/img/why-i-blasted-your-drug-deals-on-twitter/2.png)
 
-![Screenshot of Twitter notifications](https://cdn-images-1.medium.com/max/2000/1*b7g4vbDchE3QBLWgMbBwFg.png)*Screenshot of Twitter notifications*
+![Screenshot of Twitter notifications](/img/why-i-blasted-your-drug-deals-on-twitter/3.png)*Screenshot of Twitter notifications*
 
 People understood my point and I had sparked a lot of discussion about online privacy and the need for users to do a better job of understanding the terms of software they were using — and a lot of discussion about how companies need to do a better job of informing customers how their data was being used.
 

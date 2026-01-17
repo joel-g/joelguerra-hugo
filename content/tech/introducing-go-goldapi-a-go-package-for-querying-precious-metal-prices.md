@@ -2,7 +2,7 @@
 title: "Introducing go-goldapi: a Go Package for Querying Precious Metal Prices"
 date: 2020-11-04T17:33:09-08:00
 draft: false
-featured_image: "https://miro.medium.com/max/875/0*TAgWE8opTf-3MtCB"
+featured_image: "/img/introducing-go-goldapi-a-go-package-for-querying-precious-metal-prices/1.jpg"
 tags: ["golang"]
 ---
 _Photo by [Stanislaw Zarychta](https://unsplash.com/@stahooo) on [Unsplash](https://unsplash.com/)_

@@ -10,11 +10,11 @@ If you’re a developer or student you probably have a Stack Overflow account. I
 
 Well, look no further than this simple Python Flask application!
 
-![Screenshot of example leaderboard](https://cdn-images-1.medium.com/max/3466/1*qg-vCU1lPgw52ERBAgGCVQ.png)*Screenshot of example leaderboard*
+![Screenshot of example leaderboard](/img/make-a-stack-overflow-reputation-leader-board-for-your-team-with-python/1.png)*Screenshot of example leaderboard*
 
 Here is an example of this website in action using myself and some friends: h[ttp://sampleleaderboard.azurewebsites.net](https://sampleleaderboard.azurewebsites.net)
 
-![](https://cdn-images-1.medium.com/max/2000/0*wQC_pl8sqXkPcLvR.png)
+![](/img/make-a-stack-overflow-reputation-leader-board-for-your-team-with-python/2.png)
 
 In order to run your own leader board you will need Python 2 or 3 installed as well as the Flask module; instructions are [here](https://flask.pocoo.org/docs/1.0/installation/).
 
@@ -26,7 +26,7 @@ Fire up your code editor and edit app.py. On line 10 you will find a tuple that 
 
 To get those precious IDs you’ll need to go to your profile page and the profile page of everyone you want to add to your board. The ID will be in the URL and appear on the page as seen below.
 
-![screenshot of Stack Overflow profile page](https://cdn-images-1.medium.com/max/2700/1*8ILjDo0u1CSeMW24DGLUkg.png)*screenshot of Stack Overflow profile page*
+![screenshot of Stack Overflow profile page](/img/make-a-stack-overflow-reputation-leader-board-for-your-team-with-python/3.png)*screenshot of Stack Overflow profile page*
 
 Once you’ve populated the tuple with strings of IDs you’re ready to get a free Stack Exchange API key by registering your [app here](https://stackapps.com/apps/oauth/register).
 
@@ -40,6 +40,6 @@ Replace INSERT_YOUR_KEY_HERE with the key you just got from Stack Exchange. Save
 
 Navigate your browser to [http://127.0.0.1:5000](http://127.0.0.1:5000) or localhost:5000 and you should be live! You can sort the list by total reputation, reputation change this month and reputation change this week.
 
-![](https://cdn-images-1.medium.com/max/5988/1*fIAprPHEwSOYszZGnSADXg.png)
+![](/img/make-a-stack-overflow-reputation-leader-board-for-your-team-with-python/4.png)
 
 By now you’re probably thinking “Wow, this is some really basic CSS. I could do better.” Please do! Change the HTML/CSS and show me screenshots of what you made at [@joelatwar](https://twitter.com/joelatwar). Or better yet deploy it to your favorite cloud. My preferred cloud is Azure. If you’d like to deploy it there follow [this guide](https://prmadi.com/running-flask-app-with-httpplatformhandler-in-azure-app-services/). If you deploy your own leader board definitely send me a link!

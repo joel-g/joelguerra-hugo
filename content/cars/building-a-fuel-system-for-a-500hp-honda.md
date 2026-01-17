@@ -3,7 +3,7 @@ title: "Building a Fuel System for a 500hp Honda"
 date: 2023-01-07T11:38:27-08:00
 draft: false
 tags: ["honda", "fuel", "turbo", "crx"]
-featured_image: "https://cdn-images-1.medium.com/max/2000/1*USOymonrhA3bMIfTS9tpdw.jpeg"
+featured_image: "/img/building-a-fuel-system-for-a-500hp-honda/1.jpeg"
 ---
 
 This is the companion guide of this YouTube video. For full context watch the video.
@@ -40,10 +40,10 @@ The fuel rail and pressure regulator have ORB ports so ORB to AN fittings will b
 
 The rubber vent hose is looped to prevent spilling (per SCCA recommendations) and vents outside of the car away from the exhaust or any hot components.
 
-![](https://cdn-images-1.medium.com/max/2000/1*USOymonrhA3bMIfTS9tpdw.jpeg)
+![](/img/building-a-fuel-system-for-a-500hp-honda/1.jpeg)
 
 Below is the wiring diagram for the pumps. Each fuel pump has its own 30 amp relay. The diagram shows 5 pin relays but as you can see the 5th pin is not used, so 4 pin would work as well. I used 8 AWG wire from my fuse box to the relays where I split to 14 AWG for each pump. Each pump has a 14 AWG chassis ground. The 8 AWG is fused with a 50 amp fuse at the fuse box. Each relay has a 20 amp fuse. The “kill switch” on my dash is optional but allows me to turn off the pumps manually. If you choose not to install a kill switch you can chassis ground pin 85 of the relays. The relays are activated by the original fuel pump power source by tapping into the factory harness at the factory fuel pump location.
 
-![wiring diagram](https://cdn-images-1.medium.com/max/2144/1*Wrq6yTfBQiTly7q52fSnqQ.png)*wiring diagram*
+![wiring diagram](/img/building-a-fuel-system-for-a-500hp-honda/2.png)*wiring diagram*
 
 If this was helpful please let me know on YouTube or Twitter. If something is unclear please ask!
