@@ -1,6 +1,6 @@
 ---
 title: "Introducing NameCamper: Claim Your Dream Username"
-date: 2026-01-17T10:00:00-08:00
+date: 2026-01-17T08:00:00-08:00
 draft: false
 tags: ["namecamper", "saas"]
 ---
