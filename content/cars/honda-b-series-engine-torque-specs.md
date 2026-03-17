@@ -164,18 +164,18 @@ For ARP head studs (208-4303):
 ### Flywheel Bolt Pattern (Star Sequence)
 
 ```
-            (1)
-             ○
-        (8)     (2)
-          ○   ○
+               (1)
+                ○
+        (8)           (2)
+          ○             ○
 
-       (7)       (3)
-         ○       ○
+      (7)                 (3)
+        ○                   ○
 
-          ○   ○
-        (6)     (4)
-             ○
-            (5)
+          ○             ○
+        (6)           (4)
+                ○
+               (5)
 
   Sequence: 1 → 5 → 3 → 7 → 2 → 6 → 4 → 8
             (opposite corners, star pattern)
