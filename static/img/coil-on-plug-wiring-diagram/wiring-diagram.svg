@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" style="background-color: white;">
+  <!-- Title -->
+  <text x="700" y="35" font-family="Arial, sans-serif" font-size="26" font-weight="bold" text-anchor="middle" fill="#000">
+    Honda B/D/H/F Series Coil-On-Plug Wiring Diagram
+  </text>
+  <text x="700" y="60" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#666">
+    Using D17 or K-Series Coils (3-Wire Setup)
+  </text>
+
+  <!-- Distributor Harness Box -->
+  <rect x="80" y="120" width="220" height="100" fill="#f0f0f0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="190" y="150" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#000">
+    Distributor Harness
+  </text>
+  <text x="190" y="175" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#666">
+    (Engine Bay)
+  </text>
+  <text x="190" y="200" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#000">
+    Black/Yellow Wire
+  </text>
+
+  <!-- Power connection point from distributor -->
+  <circle cx="300" cy="190" r="6" fill="#FF0000" stroke="#000" stroke-width="1"/>
+
+  <!-- Cylinder Head Ground -->
+  <rect x="80" y="580" width="220" height="100" fill="#d0d0d0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="190" y="610" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#000">
+    Cylinder Head
+  </text>
+  <text x="190" y="635" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#000">
+    Ground Bolt
+  </text>
+  <circle cx="190" cy="660" r="8" fill="#000"/>
+  <text x="190" y="668" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#fff">
+    GND
+  </text>
+
+  <!-- Ground connection point -->
+  <circle cx="300" cy="630" r="6" fill="#000" stroke="#fff" stroke-width="1"/>
+
+  <!-- ECU Box -->
+  <rect x="1100" y="350" width="240" height="250" fill="#e6f3ff" stroke="#0066cc" stroke-width="3" rx="5"/>
+  <text x="1220" y="385" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#000">
+    ECU
+  </text>
+  <text x="1220" y="410" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#666">
+    (Inside Car)
+  </text>
+  <text x="1220" y="430" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#666">
+    with COP Capability
+  </text>
+
+  <!-- ECU Signal connection points -->
+  <circle cx="1100" cy="470" r="6" fill="#00cc00" stroke="#000" stroke-width="1"/>
+  <text x="1080" y="475" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="end" fill="#000">Cyl 1</text>
+
+  <circle cx="1100" cy="510" r="6" fill="#00cc00" stroke="#000" stroke-width="1"/>
+  <text x="1080" y="515" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="end" fill="#000">Cyl 2</text>
+
+  <circle cx="1100" cy="550" r="6" fill="#00cc00" stroke="#000" stroke-width="1"/>
+  <text x="1080" y="555" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="end" fill="#000">Cyl 3</text>
+
+  <circle cx="1100" cy="590" r="6" fill="#00cc00" stroke="#000" stroke-width="1"/>
+  <text x="1080" y="595" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="end" fill="#000">Cyl 4</text>
+
+  <!-- Coil Packs (4 coils in a 2x2 grid) -->
+  <!-- Coil 1 (Top Left) -->
+  <g id="coil1">
+    <rect x="450" y="240" width="160" height="140" fill="#fff" stroke="#333" stroke-width="2" rx="5"/>
+    <text x="530" y="270" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#000">
+      Coil 1
+    </text>
+    <text x="530" y="290" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">
+      (Passenger Side)
+    </text>
+
+    <!-- Connection dots -->
+    <circle cx="480" cy="340" r="5" fill="#00cc00" stroke="#000" stroke-width="1"/>
+    <text x="480" y="360" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#00cc00">SIG</text>
+
+    <circle cx="530" cy="340" r="5" fill="#000" stroke="#fff" stroke-width="1"/>
+    <text x="530" y="360" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#000">GND</text>
+
+    <circle cx="580" cy="340" r="5" fill="#FF0000" stroke="#000" stroke-width="1"/>
+    <text x="580" y="360" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#FF0000">PWR</text>
+  </g>
+
+  <!-- Coil 2 (Top Right) -->
+  <g id="coil2">
+    <rect x="680" y="240" width="160" height="140" fill="#fff" stroke="#333" stroke-width="2" rx="5"/>
+    <text x="760" y="270" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#000">
+      Coil 2
+    </text>
+
+    <circle cx="710" cy="340" r="5" fill="#00cc00" stroke="#000" stroke-width="1"/>
+    <text x="710" y="360" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#00cc00">SIG</text>
+
+    <circle cx="760" cy="340" r="5" fill="#000" stroke="#fff" stroke-width="1"/>
+    <text x="760" y="360" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#000">GND</text>
+
+    <circle cx="810" cy="340" r="5" fill="#FF0000" stroke="#000" stroke-width="1"/>
+    <text x="810" y="360" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#FF0000">PWR</text>
+  </g>
+
+  <!-- Coil 3 (Bottom Left) -->
+  <g id="coil3">
+    <rect x="450" y="440" width="160" height="140" fill="#fff" stroke="#333" stroke-width="2" rx="5"/>
+    <text x="530" y="470" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#000">
+      Coil 3
+    </text>
+
+    <circle cx="480" cy="540" r="5" fill="#00cc00" stroke="#000" stroke-width="1"/>
+    <text x="480" y="560" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#00cc00">SIG</text>
+
+    <circle cx="530" cy="540" r="5" fill="#000" stroke="#fff" stroke-width="1"/>
+    <text x="530" y="560" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#000">GND</text>
+
+    <circle cx="580" cy="540" r="5" fill="#FF0000" stroke="#000" stroke-width="1"/>
+    <text x="580" y="560" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#FF0000">PWR</text>
+  </g>
+
+  <!-- Coil 4 (Bottom Right) -->
+  <g id="coil4">
+    <rect x="680" y="440" width="160" height="140" fill="#fff" stroke="#333" stroke-width="2" rx="5"/>
+    <text x="760" y="470" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#000">
+      Coil 4
+    </text>
+    <text x="760" y="490" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">
+      (Driver Side)
+    </text>
+
+    <circle cx="710" cy="540" r="5" fill="#00cc00" stroke="#000" stroke-width="1"/>
+    <text x="710" y="560" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#00cc00">SIG</text>
+
+    <circle cx="760" cy="540" r="5" fill="#000" stroke="#fff" stroke-width="1"/>
+    <text x="760" y="560" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#000">GND</text>
+
+    <circle cx="810" cy="540" r="5" fill="#FF0000" stroke="#000" stroke-width="1"/>
+    <text x="810" y="560" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#FF0000">PWR</text>
+  </g>
+
+  <!-- POWER WIRES (RED) - route cleanly above coils -->
+  <!-- Main power bus line horizontal -->
+  <path d="M 300 190 L 370 190 L 370 220 L 810 220" stroke="#FF0000" stroke-width="4" fill="none"/>
+
+  <!-- Power drops to each coil -->
+  <line x1="580" y1="220" x2="580" y2="340" stroke="#FF0000" stroke-width="3"/>
+  <line x1="810" y1="220" x2="810" y2="340" stroke="#FF0000" stroke-width="3"/>
+  <line x1="580" y1="220" x2="580" y2="540" stroke="#FF0000" stroke-width="3"/>
+  <line x1="810" y1="220" x2="810" y2="540" stroke="#FF0000" stroke-width="3"/>
+
+  <!-- GROUND WIRES (BLACK) - route cleanly below coils -->
+  <!-- Main ground bus line horizontal -->
+  <path d="M 300 630 L 370 630 L 370 600 L 760 600" stroke="#000" stroke-width="4" fill="none"/>
+
+  <!-- Ground connections from each coil -->
+  <line x1="530" y1="340" x2="530" y2="600" stroke="#000" stroke-width="3"/>
+  <line x1="760" y1="340" x2="760" y2="600" stroke="#000" stroke-width="3"/>
+  <line x1="530" y1="540" x2="530" y2="600" stroke="#000" stroke-width="3"/>
+  <line x1="760" y1="540" x2="760" y2="600" stroke="#000" stroke-width="3"/>
+
+  <!-- SIGNAL WIRES (GREEN) - route around coils, not over them -->
+
+  <!-- Coil 1 Signal - goes left, down, then right to ECU -->
+  <path d="M 480 340 L 420 340 L 420 410 L 880 410 L 880 470 L 1100 470" stroke="#00cc00" stroke-width="3" fill="none"/>
+
+  <!-- Coil 2 Signal - goes left, down, then right to ECU -->
+  <path d="M 710 340 L 650 340 L 650 430 L 900 430 L 900 510 L 1100 510" stroke="#00cc00" stroke-width="3" fill="none"/>
+
+  <!-- Coil 3 Signal - goes left, down, then right to ECU -->
+  <path d="M 480 540 L 400 540 L 400 660 L 900 660 L 900 550 L 1100 550" stroke="#00cc00" stroke-width="3" fill="none"/>
+
+  <!-- Coil 4 Signal - goes left, down, then right to ECU -->
+  <path d="M 710 540 L 630 540 L 630 670 L 920 670 L 920 590 L 1100 590" stroke="#00cc00" stroke-width="3" fill="none"/>
+
+  <!-- Legend Box -->
+  <g id="legend">
+    <rect x="80" y="750" width="400" height="120" fill="#f9f9f9" stroke="#333" stroke-width="2" rx="5"/>
+    <text x="280" y="780" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#000">
+      Wire Legend
+    </text>
+
+    <line x1="110" y1="805" x2="180" y2="805" stroke="#FF0000" stroke-width="4"/>
+    <text x="195" y="810" font-family="Arial, sans-serif" font-size="13" fill="#000">
+      Power (12V Switched) - From Black/Yellow wire
+    </text>
+
+    <line x1="110" y1="835" x2="180" y2="835" stroke="#000" stroke-width="4"/>
+    <text x="195" y="840" font-family="Arial, sans-serif" font-size="13" fill="#000">
+      Ground - To cylinder head bolt
+    </text>
+
+    <line x1="110" y1="860" x2="180" y2="860" stroke="#00cc00" stroke-width="3"/>
+    <text x="195" y="865" font-family="Arial, sans-serif" font-size="13" fill="#000">
+      Signal (ECU Control) - Individual per cylinder
+    </text>
+  </g>
+
+  <!-- Notes Box -->
+  <g id="notes">
+    <rect x="520" y="750" width="820" height="120" fill="#fffacd" stroke="#333" stroke-width="2" rx="5"/>
+    <text x="930" y="780" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#000">
+      Installation Notes
+    </text>
+
+    <text x="545" y="810" font-family="Arial, sans-serif" font-size="13" fill="#000">
+      • Wire lengths indicate which coil they connect to (shortest = Cyl 1, longest = Cyl 4)
+    </text>
+    <text x="545" y="835" font-family="Arial, sans-serif" font-size="13" fill="#000">
+      • Keep all wiring away from exhaust, belts, and moving parts
+    </text>
+    <text x="545" y="860" font-family="Arial, sans-serif" font-size="13" fill="#000">
+      • Use clean, paint-free surface on cylinder head for ground connection
+    </text>
+  </g>
+
+  <!-- Website credit -->
+  <text x="1350" y="890" font-family="Arial, sans-serif" font-size="11" text-anchor="end" fill="#999">
+    joelguerra.com
+  </text>
+</svg>
