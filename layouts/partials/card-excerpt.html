@@ -1,3 +1,5 @@
-{{- $text := .Summary | plainify | htmlUnescape -}}
+{{- /* Omit only the image hook's generated helper, keeping article links and captions. */ -}}
+{{- $summary := replaceRE `<a class="original-image"[^>]*>View original image</a>` "" .Summary -}}
+{{- $text := $summary | plainify | htmlUnescape -}}
 {{- $text = replaceRE `\s+` " " $text -}}
 {{- return (printf "%s" (trim $text " \n\r\t" | truncate 218 | htmlUnescape)) -}}
