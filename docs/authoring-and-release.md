@@ -2,7 +2,7 @@
 
 This runbook describes the local maintenance candidate. It does not authorize production publication. Cloudflare Pages deploys automatically when `master` is pushed or receives a merge; keep maintenance commits on the working branch until the release decision.
 
-At the `7ff1dbd` code checkpoint, Case's production/preview/warm builds and negative-build preservation checks passed; Kipp independently passed ten regression tests and source-preservation checks. Kipp's fresh-cache build was interrupted and remains incomplete. Cold builds and all local inference are paused until directed to resume. Commands below document the supported workflow; they are not an instruction to execute heavy work during that pause. [Remaining QA and release gates](implementation-plan.md#execution-record) are explicit.
+At code revision `797c489`, Kipp independently passed production/preview builds and all 13 regression tests with no skips, including generated-image coverage for the corrected responsive height rule. Routes, metadata, local references, original assets and derivative bytes remained intact. The preceding `d8ab662` candidate passed a fresh-cache build and local authoring, retention, failure-preservation, and image-correction rehearsals. Resumed QA is complete; no builds remain active and it used no local inference. Commands below document the supported workflow, not automatic release actions. [Revision-specific evidence and remaining release gates](implementation-plan.md#execution-record) distinguish local checks from still-unverified browser and hosting behavior.
 
 ## Toolchain and build commands
 
@@ -61,7 +61,7 @@ Existing originals and legacy asset URLs remain available. New responsive deriva
 
 Supported local raster inputs produce WebP candidates up to 640/1280 pixels at quality 82 and an original-format fallback up to 1280 pixels at quality 85, without upscaling. SVG and unsupported inputs retain their original path. Full-size article originals remain available through the generated original-image links. These choices target smaller transfers while retaining detail; actual browser source selection, transferred bytes, and visual suitability still need interactive verification.
 
-The first full candidate generated 2,029 unique derivatives occupying 402,485,362 bytes in addition to retained originals. This is build/output storage, not bytes downloaded by each visitor. Cold processing is heavier than a cached build; the configured 300-second resource timeout replaced an insufficient 30-second default. Warm production/preview builds passed; Kipp's independent fresh-cache run was interrupted at the pause and supplies no completed timing result. Complete that check before promising a cold-build budget or host suitability.
+The first full candidate generated 2,029 unique derivatives occupying 402,485,362 bytes in addition to retained originals. This is build/output storage, not bytes downloaded by each visitor. Cold processing is heavier than a cached build; the configured 300-second resource timeout replaced an insufficient 30-second default. Kipp's resumed fresh-cache production build at `d8ab662` passed in 173.724 seconds for the validated wrapper (169.154 seconds in Hugo), with per-process `GOMAXPROCS=2`. At the later CSS/test-only correction `797c489`, targeted warm production/preview builds passed in 18.945/17.374 seconds; all derivative bytes were unchanged. These are local Windows measurements, not a host build-time guarantee. `GOMAXPROCS` limits concurrent Go execution, not machine-wide CPU usage.
 
 ## Cache policy is a candidate, not a proven live result
 
@@ -79,7 +79,7 @@ The validated build retains compatible versioned assets from an existing output 
 python scripts/build.py --retain-from PATH_TO_PREVIOUS_DEPLOYMENT_ARTIFACT
 ```
 
-Retain the artifact containing all assets needed by still-cacheable old HTML, including earlier retained derivatives; the immediately preceding source tree alone is insufficient. Validate hashes and reject changed bytes at existing versioned URLs. The actual Pages process must be proven to provide that artifact/retention mechanism before deploying these changes. Do not assume Pages preserves old output automatically, and do not prune retained assets during a correction rollout.
+Retain the artifact containing all assets needed by still-cacheable old HTML, including earlier retained derivatives; the immediately preceding source tree alone is insufficient. Validate hashes and reject changed bytes at existing versioned URLs. Independent local fixtures passed explicit and automatic retention, rejected a tampered retained asset without changing any prior output bytes, and preserved both versions through an image correction and revert. The final CSS correction also retained the previous fingerprinted stylesheet unchanged. The actual Pages process must still be proven to provide that artifact/retention mechanism before deploying these changes. Do not assume Pages preserves old output automatically, and do not prune retained assets during a correction rollout.
 
 Keep a known-good deployment/artifact and the exact candidate revision. Rehearse rollback in a permitted local/preview environment, including old/new HTML references and retained media. A source revert alone does not prove that every returning browser will immediately see the previous page.
 

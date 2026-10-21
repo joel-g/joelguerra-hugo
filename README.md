@@ -79,7 +79,7 @@ Hugo's default build output is `public/`. The public homepage generator was obse
 
 The [implementation plan](docs/implementation-plan.md) defines local work ownership and release gates. The [milestone checklist](docs/maintenance-milestones.md) tracks acceptance criteria, including image delivery and CDN/browser caching. Local implementation and working-branch commits are authorized; production publication and live cache changes are separate decisions.
 
-Current checkpoint: owner production/preview builds and ten independent regression tests passed, with source preservation verified. Independent cold-build QA was interrupted and remains incomplete; heavy builds and local inference are paused. Browser QA is blocked by the unavailable controllable browser surface, and host/cache/rollback verification remains open. See the plan's [execution record](docs/implementation-plan.md#execution-record) before resuming or preparing a release.
+Current checkpoint: independent local QA passed at code revision `797c489`, including production/preview builds, 13 regression tests, preserved routes/content/original assets, and the corrected responsive image-height rule. The preceding candidate also passed a fresh-cache build and local authoring, retention, failure-preservation, and image-correction rehearsals. No builds remain active; resumed QA used no local inference. Browser QA is blocked by the unavailable controllable browser surface, and host/cache/rollback verification remains open. See the plan's [execution record](docs/implementation-plan.md#execution-record) for revision-specific evidence and remaining release gates.
 
 Maintenance and deployment documentation additions, October 21, 2026:
 
