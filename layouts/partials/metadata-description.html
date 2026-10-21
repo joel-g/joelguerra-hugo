@@ -1,0 +1,10 @@
+{{- $description := .Description -}}
+{{- if .IsHome }}{{ $description = .Site.Params.description }}{{ end -}}
+{{- if not $description -}}
+  {{- if .IsPage -}}
+    {{- $description = partial "card-excerpt.html" . -}}
+  {{- else -}}
+    {{- $description = .Site.Params.description -}}
+  {{- end -}}
+{{- end -}}
+{{- return (printf "%s" ($description | plainify | htmlUnescape | replaceRE `\s+` " " | truncate 158 | htmlUnescape)) -}}

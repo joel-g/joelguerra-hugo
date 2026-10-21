@@ -1,0 +1,24 @@
+{{ define "main" }}
+  {{ with .Content }}<article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">{{ . }}</article>{{ end }}
+  {{ $mainSections := .Site.Params.mainSections | default (slice "posts") }}
+  {{ $posts := where .Site.RegularPages "Section" "in" $mainSections }}
+  {{ with $posts }}
+    <section class="pa3 pa4-ns w-100 w-70-ns center" aria-labelledby="recent-posts">
+      <h2 id="recent-posts" class="f2">Recent posts</h2>
+      {{ $nPosts := $.Param "recent_posts_number" | default 3 }}
+      {{ range first $nPosts . }}
+        <div class="relative w-100 mb4">{{ partial "summary-with-image.html" . }}</div>
+      {{ end }}
+      <nav aria-label="Post archives" class="mt4">
+        <h2 class="f3">Browse the archives</h2>
+        <ul class="list pa0 flex flex-wrap">
+          {{ range $mainSections }}
+            {{ with $.Site.GetPage "section" . }}
+              <li class="mr3 mb3"><a href="{{ .Permalink }}" class="link dib f5 pa2 br3 bg-dark-gray white">All {{ .Section | humanize }}</a></li>
+            {{ end }}
+          {{ end }}
+        </ul>
+      </nav>
+    </section>
+  {{ end }}
+{{ end }}

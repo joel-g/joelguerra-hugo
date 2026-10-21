@@ -1,0 +1,3 @@
+{{- $text := .Summary | plainify | htmlUnescape -}}
+{{- $text = replaceRE `\s+` " " $text -}}
+{{- return (printf "%s" (trim $text " \n\r\t" | truncate 218 | htmlUnescape)) -}}

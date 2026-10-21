@@ -1,0 +1,7 @@
+{{- $url := .Permalink -}}
+{{- if .IsSection -}}
+  {{- with .Paginator -}}
+    {{- $url = .URL | absURL -}}
+  {{- end -}}
+{{- end -}}
+{{- return $url -}}
