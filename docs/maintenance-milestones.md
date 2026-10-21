@@ -6,6 +6,22 @@ The user confirms Cloudflare Pages automatically deploys on pushes or merges to 
 
 Keep Hugo, existing article/image URLs, and the Markdown posting workflow. Preserve published content and technical diagrams. Changes to automotive technical claims are outside this maintenance scope.
 
+## Current checkpoint
+
+Code candidate: `7ff1dbd8ef8db720a81094db5ae9d0fa1e136ded`. Local documentation follows that revision. Cold builds and all local inference are paused; no background monitoring or production work is authorized. See the [execution record and exact remaining QA steps](implementation-plan.md#execution-record).
+
+| Milestone | Recorded status |
+|---|---|
+| M0 | Baseline build/routes/source preservation verified; configured Pages settings, preview and recoverable deployment remain open |
+| M1 | Local toolchain/build/validation implemented; Case production/preview/warm and negative-preservation checks passed; Kipp's ten regression tests passed; independent cold build interrupted and incomplete |
+| M2 | Small fixes integrated and owner output checks passed; independent final output/rendered checks remain open |
+| M3 | Native asset path and obsolete tooling removal integrated; CSS provenance/licensing retained; visual equivalence not established |
+| M4 | Responsive pipeline integrated with deterministic owner evidence; 13 starter-photo alt descriptions independently verified; broader alt review and interactive image/a11y checks remain open |
+| M5 | Provisional source header policy and local checks implemented; browser reuse, effective deployed rules, old-artifact retention and corrected-image rollout not verified |
+| M6 | Not release-ready; cold QA, interactive QA, host configuration and rollback gates remain open |
+
+The checkboxes below represent full acceptance criteria. An unchecked item can have implemented code and passing partial checks; it is not a declaration that no work was done.
+
 ## Ownership and sequencing
 
 | Agent | Responsibility | Boundary |
@@ -23,8 +39,10 @@ Use the parent-coordinated separate worktrees/branches based on the recorded rev
 
 Owner: **Tars**, with **Kipp** collecting evidence. Complete evidence is required before release; independent local work may proceed with unknowns recorded.
 
-- [ ] **M0.1 - Identify the working deployment.** Record actual host/CDN, successful production Hugo version and build command, environment variables needed by the build (names only), publication trigger, output directory, and available preview mechanism. Acceptance: a reproducible recipe and named rollback artifact/revision exist; unknowns are explicit. The user confirms Cloudflare Pages and the `master` deployment trigger; the public homepage generator reports Hugo 0.142.0. Pages' configured version/command/output/preview settings remain unconfirmed. Local build validation is in progress; do not mark this item complete yet.
+- [ ] **M0.1 - Identify the working deployment.** Record actual host/CDN, successful production Hugo version and build command, environment variables needed by the build (names only), publication trigger, output directory, and available preview mechanism. Acceptance: a reproducible recipe and named rollback artifact/revision exist; unknowns are explicit. The user confirms Cloudflare Pages and the `master` deployment trigger; the public homepage generator reports Hugo 0.142.0. Pages' configured version/command/output/preview settings remain unconfirmed. Local owner builds passed, but independent cold candidate validation was interrupted; do not mark this item complete yet.
 - [ ] **M0.2 — Freeze the preservation contract.** Capture published route inventory, article count, drafts, canonical/redirect behavior, and existing image URLs. Select representative home, `/cars/`, `/cars/page/2/`, `/tech/`, tag/about pages, a recent diagram article, a long photo walkthrough, and a code-heavy article. Acceptance: expected URLs and screenshots/metadata are recorded, including known defects, without changing content.
+
+  Verified local baseline: Kipp's Hugo 0.142.0 build produced 107 pages, two paginator pages, 702 static files, three aliases, 814 total output files and 76 HTML routes; checked local HTML links/assets had zero unresolved targets. The 35 published article routes match the live sitemap containing 70 URLs, and the draft is absent. Representative visual/metadata comparisons remain part of candidate QA; this evidence does not clear all M0/release gates.
 - [ ] **M0.3 — Record evidence and rollback locations.** Save a known-good generated artifact or identify the host's recoverable deployment; document how rollback selects it. Acceptance: restoring the prior artifact is feasible and retains assets needed by old pages. Do not perform production rollback or purge during planning.
 
 ## M1 — Make builds and checks repeatable

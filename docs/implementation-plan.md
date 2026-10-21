@@ -12,7 +12,8 @@ The user authorizes local implementation and working-branch commits. Cloudflare 
 
 | Gate | Current evidence | Effect |
 |---|---|---|
-| Repository baseline | Base revision above; assessment found 40 Markdown documents, 36 articles, one draft, and four index pages | Use as comparison input; record any verified correction |
+| Repository baseline | Independent Hugo 0.142.0 baseline build: 107 pages, two paginator pages, 702 static files, three aliases; 814 output files and 76 HTML routes; zero unresolved checked local HTML asset/link targets | Compare the integrated candidate against this generated route/reference baseline |
+| Content preservation | 35 published article routes match the live sitemap's 70 URLs; one draft absent from output | Keep article/image URLs and draft exclusion; the static assessment counted 36 article sources including that draft |
 | Production host/trigger | User confirms Cloudflare Pages and automatic production deployment on push/merge to `master` | Treat every such operation as a release; none authorized now |
 | Published Hugo generator | Public homepage reports Hugo 0.142.0; parent captured `baseline/home.html` and `baseline/home-headers.json` in the task workspace | Use 0.142.0 as the first local compatibility target; this observes the published artifact, not Pages dashboard settings |
 | Production build settings | Configured Hugo version, host build command/output settings and environment remain unconfirmed | M0 stays incomplete; local version discovery and fixes may proceed |
@@ -55,6 +56,42 @@ Each owner hands off: branch/worktree, base/head revision, exact changed paths, 
 
 ## Execution record
 
-At plan creation: local implementation is authorized; the plan/checklist and deployment notes are documentation changes only. M0 remains partial. Implementation and QA results will be appended after owner handoffs; unchecked milestone items are not claims of failure or completion.
+### Local checkpoint: code candidate `7ff1dbd`
+
+Implementation is integrated locally on `maintenance/candidate-20261021`, code revision `7ff1dbd8ef8db720a81094db5ae9d0fa1e136ded`. Documentation-only changes follow that revision. Resource-intensive cold builds and all local inference are paused; no background monitoring is scheduled. Resume those activities only when directed. No push, deployment, purge, or live configuration change occurred.
+
+| Evidence | Outcome and limit |
+|---|---|
+| Case implementation checks | Production/preview builds, warm builds, ten regression tests, deterministic derivative names/bytes, and deliberate broken-image failure preserving prior good output passed. These are owner checks, not final independent rendered QA. |
+| Kipp independent regression tests | Ten tests passed on the integrated candidate. |
+| Kipp source preservation | PASS: article routes/drafts unchanged; no content files or original assets added/removed; only the starter article's 13 alt strings changed; stripping alt strings leaves its body identical. The intended `_headers` policy is the only changed original static-file Git blob. |
+| Kipp independent cold build | Interrupted at the coordinator's pause; incomplete, with no successful final build result. Do not describe it as passed or as an application failure. |
+| Interactive QA | Environment-blocked: computer-use inventory exposed no apps/browsers; the in-app route failed with `Browser is not available: iab` despite Chrome/Edge being installed. Desktop/mobile rendering, focus/keyboard, zoom, assistive technology, actual source selection and browser-cache reuse remain untested. No alternative automation or public server workaround was used. |
+| Release readiness | Not established: configured Pages build/preview settings, effective candidate headers, prior-artifact retention, corrected-image rollout, and host rollback remain unverified. |
+
+Source evidence is recorded in task-workspace `qa-evidence/candidate-source-preservation.json`; the interrupted build log is `qa-evidence/candidate-prod-build.log`. These are evidence locations, not new commands to execute during the pause. Owner image-size comparisons are static candidate-file budgets, not measured mobile transferred bytes or Core Web Vitals.
+
+**Next QA steps, not executed at this checkpoint:**
+
+1. When heavy work is explicitly resumed, Kipp should complete a fresh-cache production build of the exact final code revision with pinned Hugo 0.142.0 extended and the 300-second timeout. Record full exit status, duration and output; then run preview validation and compare generated routes, drafts, metadata, local references and retained original asset hashes against the baseline.
+2. Independently exercise the integrated wrapper's negative-build preservation, versioned media/CSS retention from a complete prior artifact, deterministic variants, and a disposable new-post workflow. Re-run only affected checks if code changes after this checkpoint; documentation-only commits do not establish or invalidate rendered behavior.
+3. With an authorized controllable browser/assistive-technology route, verify representative desktop/mobile pages, readable diagrams, focus/skip link, zoom/reflow, image selection/network behavior and returning-browser correction/rollback. The currently unavailable browser surface must be resolved; do not expose a local server publicly or change network settings.
+4. Before any separate release decision, confirm actual Pages settings and recoverable deployment, establish clean-build retention of old versioned assets, and verify deployed header precedence, validators, cache behavior and a corrected-image rollout in an authorized preview. Present unresolved limitations with the candidate revision; do not automatically push or deploy.
+
+### Implementation history
+
+The initial plan was committed locally as `e44ee2d`. Case verified the official portable Hugo 0.142.0 extended binary's SHA256; Kipp independently built the base revision and reported the baseline checks above. Evidence is retained under `baseline/` and `qa-evidence/` in the task workspace. M0 remains partial because configured Pages settings, preview behavior, and a recoverable deployment are unverified.
+
+The base build emits a raw-HTML warning for an existing cosmetic wrapper. Preserve that behavior and the diagram/content; do not enable unsafe HTML globally to suppress it. Parent made that scope decision after comparing the baseline.
+
+Bounded local inference reviewed public cache-regression material using `store:false`; final decisions remain with the implementing/reviewing agents. Useful Unicode/space-path fixture and redundant-fingerprint observations were retained for consideration. Incorrect redirect-cache and ordinary-image CORS claims were rejected; these are not implementation requirements.
+
+The checkpoint above supersedes earlier pending-status notes. Unchecked milestone items represent acceptance gates not fully closed, rather than a claim that their implementation has not begun. Local success does not clear the release gates.
+
+Plex delivered the initial M2 changes in `c16b36a` (integrated as `e49ff10`): configuration/indexing, pagination metadata, card excerpts/navigation, authoring fields, social metadata, heading/skip-link markup. Owner checks passed with Hugo 0.142.0 and the current copied Case asset/media components, for both production and preview, plus independent `HUGO_ENV` and `HUGO_ENVIRONMENT` preview flags. Those checks were for a combined development tree, not a claim that the isolated Plex branch builds without Case's dependencies. Final integrated Kipp QA remains required.
+
+Plex's follow-up `230ac8b` adds 13 visually reviewed alt descriptions to the starter-replacement article, preserving technical prose, numbers, links, image URLs and order. The global source count moves from 642 to 629 empty alt occurrences out of 683; this is a bounded editorial sample, not site-wide accessibility completion. The cold media build also required the separate timeout/tooling-ignore follow-up `e7d2328`; integrated build checks must confirm that behavior.
+
+Case's `e7cc58e` and `8275069` were integrated as `66d2ca4` and `7ff1dbd`: pinned portable Hugo, native CSS/media, removed unused release/obsolete bundler tooling, staged validated output, retention support, permanent checks, and disjoint provisional cache rules. The vendored CSS was preserved from the Git/public baseline, with explicit newline handling and licenses retained. No visual redesign was intended; preserved CSS bytes and HTML checks do not prove visual equivalence. Plex follow-ups were integrated as `5d7ede9` and `f2d20f4`.
 
 - Tars 🤖
