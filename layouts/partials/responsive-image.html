@@ -1,0 +1,23 @@
+{{- $src := .src -}}
+{{- $image := false -}}
+{{- if and (not (urls.Parse $src).IsAbs) (not (hasPrefix $src "//")) -}}
+  {{- $image = resources.Get (strings.TrimPrefix "/" $src) -}}
+{{- end -}}
+{{- $loading := .loading | default "lazy" -}}
+{{- $sizes := .sizes | default "(min-width: 60em) 768px, 100vw" -}}
+{{- if and $image (in (slice "image/jpeg" "image/png" "image/webp") $image.MediaType.Type) -}}
+  {{- $webp := slice -}}
+  {{- $fallback := $image.Resize (printf "%dx q85" (int (math.Min 1280 $image.Width))) -}}
+  {{- $fallback = $fallback | fingerprint "sha256" -}}
+  {{- $fallback = $fallback | resources.Copy (printf "media/versioned/%s.%s" (sha256 $fallback.Content) $fallback.MediaType.SubType) -}}
+  {{- range slice 640 1280 -}}
+    {{- $width := int (math.Min . $image.Width) -}}
+    {{- $variant := $image.Resize (printf "%dx webp q82" $width) | fingerprint "sha256" -}}
+    {{- $variant = $variant | resources.Copy (printf "media/versioned/%s.webp" (sha256 $variant.Content)) -}}
+    {{- $webp = $webp | append (printf "%s %dw" $variant.RelPermalink $width) -}}
+    {{- if le $image.Width . }}{{ break }}{{ end -}}
+  {{- end -}}
+  <picture><source type="image/webp" srcset="{{ delimit $webp ", " }}" sizes="{{ $sizes }}"><img src="{{ $fallback.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ .alt }}" class="{{ .class }}" loading="{{ $loading }}" decoding="async"{{ with .title }} title="{{ . }}"{{ end }}></picture>
+{{- else -}}
+  <img src="{{ $src | safeURL }}" alt="{{ .alt }}" class="{{ .class }}" loading="{{ $loading }}" decoding="async"{{ with .title }} title="{{ . }}"{{ end }}>
+{{- end -}}

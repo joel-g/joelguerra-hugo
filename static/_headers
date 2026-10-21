@@ -1,20 +1,72 @@
+# Disjoint Cloudflare Pages rules. Matching header values combine.
+# Versioned assets: immutable; originals: one hour; HTML: revalidate.
+# Edge overrides and effective deployment headers require host verification.
+
+/assets/versioned/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/media/versioned/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/dist/css/app.1cb140d8ba31d5b2f1114537dd04802a.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/dist/js/app.3fc0f988d21662902933.js
+  Cache-Control: public, max-age=31536000, immutable
+
 /img/*
-  Cache-Control: public, max-age=31536000
+  Cache-Control: public, max-age=3600, must-revalidate
 
-/*.css
-  Cache-Control: public, max-age=604800
+/images/*
+  Cache-Control: public, max-age=3600, must-revalidate
 
-/*.js
-  Cache-Control: public, max-age=604800
+/cars.jpg
+  Cache-Control: public, max-age=3600, must-revalidate
 
-/*.jpg
-  Cache-Control: public, max-age=604800
+/crv.jpg
+  Cache-Control: public, max-age=3600, must-revalidate
 
-/tech/*
-  Cache-Control: public, max-age=604800
+/face.jpg
+  Cache-Control: public, max-age=3600, must-revalidate
 
-/cars/*
-  Cache-Control: public, max-age=604800
+/tech.jpg
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/favicon.ico
+  Cache-Control: public, max-age=3600, must-revalidate
 
 /
-  Cache-Control: public, max-age=604800
+  Cache-Control: public, max-age=0, must-revalidate
+
+/cars/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/tech/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/tags/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/categories/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/about/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/page/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/404.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/index.xml
+  Cache-Control: public, max-age=0, must-revalidate
+
+/sitemap.xml
+  Cache-Control: public, max-age=0, must-revalidate
+
+/robots.txt
+  Cache-Control: public, max-age=0, must-revalidate

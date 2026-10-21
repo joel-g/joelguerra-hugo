@@ -1,0 +1,5 @@
+{{- $loading := "lazy" -}}
+{{- if eq .Ordinal 0 }}{{ $loading = "eager" }}{{ end -}}
+{{- partial "responsive-image.html" (dict "page" .Page "src" .Destination "alt" .PlainText "title" .Title "class" "responsive-image" "loading" $loading) -}}
+{{- /* Original remains available without changing the Markdown or original URL. */ -}}
+{{- if not (urls.Parse .Destination).IsAbs }} <a class="original-image" href="{{ .Destination | safeURL }}">View original image</a>{{ end -}}
