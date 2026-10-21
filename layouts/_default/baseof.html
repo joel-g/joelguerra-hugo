@@ -9,7 +9,7 @@
     {{ hugo.Generator }}
 
     {{/* ROBOTS: Index in production */}}
-    {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
+    {{ if partial "production-environment.html" . }}
       <meta name="robots" content="index, follow">
     {{ else }}
       <meta name="robots" content="noindex, nofollow">
@@ -18,10 +18,7 @@
     {{/* Custom SEO additions */}}
     {{ partial "head-additions.html" . }}
 
-    {{ $stylesheet := .Site.Data.webpack_assets.app }}
-    {{ with $stylesheet.css }}
-      <link href="{{ relURL (printf "%s%s" "dist/" .) }}" rel="stylesheet">
-    {{ end }}
+    {{ partial "site-assets.html" . }}
 
     {{ range .Site.Params.custom_css }}
       <link rel="stylesheet" href="{{ relURL ($.Site.BaseURL) }}{{ . }}">
@@ -38,20 +35,19 @@
       {{ end }}
     {{ end }}
 
-    {{/* Hugo Internal Templates for social sharing */}}
-    {{- template "_internal/opengraph.html" . -}}
+    {{/* Keep Hugo's schema metadata alongside the explicit social tags above. */}}
     {{- template "_internal/schema.html" . -}}
-    {{- template "_internal/twitter_cards.html" . -}}
 
-    {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
+    {{ if partial "production-environment.html" . }}
       {{ template "_internal/google_analytics.html" . }}
     {{ end }}
   </head>
 
   <body class="ma0 {{ $.Param "body_classes"  | default "avenir bg-near-white"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
 
+    <a class="skip-link" href="#main-content">Skip to content</a>
     {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
-    <main class="pb7" role="main">
+    <main id="main-content" class="pb7" tabindex="-1">
       {{ block "main" . }}{{ end }}
     </main>
     {{ block "footer" . }}{{ partialCached "site-footer.html" . }}{{ end }}

@@ -6,11 +6,13 @@ theme = "ananke"
 MetaDataFormat = "yaml"
 DefaultContentLanguage = "en"
 SectionPagesMenu = "main"
+enableRobotsTXT = true
+# Allow cold builds to generate responsive images for long photo tutorials.
+timeout = "300s"
 
 [pagination]
   pagerSize = 10
 # googleAnalytics = "G-0BHGVC76FM"
-enableRobotsTXT = true
 
 [sitemap]
   changefreq = "monthly"
@@ -18,7 +20,6 @@ enableRobotsTXT = true
   filename = "sitemap.xml"
 
 [params]
-  env = "production"
   favicon = "favicon.ico"
   description = "Joel Guerra - Software engineer and Honda enthusiast. Tutorials on car modifications, turbo builds, and software development."
   facebook = ""
@@ -37,3 +38,14 @@ enableRobotsTXT = true
   recent_posts_number = 12
   mainSections = ["tech", "cars"]
   show_reading_time = true
+
+# Expose static originals to Hugo image processing without moving their URLs.
+[[module.mounts]]
+  source = "static"
+  target = "static"
+[[module.mounts]]
+  source = "static"
+  target = "assets"
+[[module.mounts]]
+  source = "assets"
+  target = "assets"

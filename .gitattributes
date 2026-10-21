@@ -1,0 +1,4 @@
+# Fingerprinted legacy bytes must be identical on Windows and Linux checkouts.
+themes/ananke/static/dist/** -text
+# Native asset input must concatenate identically across platforms.
+assets/css/*.css text eol=lf

@@ -1,0 +1,4 @@
+{{- $base := resources.Get "css/ananke-baseline.css" -}}
+{{- $maintenance := resources.Get "css/maintenance.css" -}}
+{{- $css := slice $base $maintenance | resources.Concat "assets/versioned/site.css" | fingerprint "sha256" -}}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">

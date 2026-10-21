@@ -1,0 +1,7 @@
+User-agent: *
+{{ if partial "production-environment.html" . -}}
+Disallow:
+Sitemap: {{ "sitemap.xml" | absURL }}
+{{ else -}}
+Disallow: /
+{{ end -}}

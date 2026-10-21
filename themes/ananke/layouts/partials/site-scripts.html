@@ -1,4 +1,1 @@
-{{ $script := .Site.Data.webpack_assets.app }}
-{{ with $script.js }}
-  <script src="{{ relURL (printf "%s%s" "dist/" .) }}"></script>
-{{ end }}
+{{/* No application JavaScript is required. Legacy bundle URLs remain in static/dist. */}}
