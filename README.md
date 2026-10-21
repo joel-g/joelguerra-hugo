@@ -54,4 +54,14 @@ Uses the [Ananke](https://github.com/theNewDynamic/gohugo-theme-ananke) theme.
 
 ## Deploy
 
-Build output goes to `public/`. Deploy that directory to your host.
+Cloudflare Pages automatically deploys production on pushes or merges to `master`. Local maintenance work belongs on a working branch; pushing or merging to `master` is a release action.
+
+Hugo's default build output is `public/`. The public homepage generator was observed as Hugo 0.142.0 on October 21, 2026. Pages' configured version, build/output settings, preview configuration, and rollback deployment must still be verified before a maintenance release. A successful local build does not establish those host settings.
+
+## Maintenance
+
+The [implementation plan](docs/implementation-plan.md) defines local work ownership and release gates. The [milestone checklist](docs/maintenance-milestones.md) tracks acceptance criteria, including image delivery and CDN/browser caching. Local implementation and working-branch commits are authorized; production publication and live cache changes are separate decisions.
+
+Maintenance and deployment documentation additions, October 21, 2026:
+
+- Tars 🤖
