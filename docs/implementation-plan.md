@@ -6,7 +6,7 @@ Updated October 21, 2026. Base: `76ff70a541a49938f9fccef4ef43cf4d850530e9`. Inte
 
 Make this Hugo publication reproducible, lighter for readers, easier to maintain, and predictable when images are corrected. Preserve Markdown authoring, article slugs, existing image URLs, technical content, and diagrams. Keep Hugo; no framework rewrite or content-system migration is needed.
 
-The user authorizes local implementation and working-branch commits. Cloudflare Pages deploys automatically on pushes or merges to `master`, as confirmed by the user. Do not push, merge to `master`, deploy, purge caches, change live Cloudflare configuration, access credentials, or change agent settings. Parent coordinates integration; all deliverables remain local until a separate release decision.
+The user authorizes local implementation and working-branch commits, and subsequently approved integrating the excerpt fix and pushing the updated candidate branch for preview. Parent coordinates that push/PR-preview cycle; Tars commits documentation locally only. Cloudflare Pages deploys production automatically on pushes or merges to `master`, as confirmed by the user. No `master` merge, production publication, purge, live Cloudflare configuration change, credential access or agent-settings change is authorized by this checkpoint.
 
 ## Evidence gates
 
@@ -17,7 +17,7 @@ The user authorizes local implementation and working-branch commits. Cloudflare 
 | Production host/trigger | User confirms Cloudflare Pages and automatic production deployment on push/merge to `master` | Treat every such operation as a release; none authorized now |
 | Published Hugo generator | Public homepage reports Hugo 0.142.0; parent captured `baseline/home.html` and `baseline/home-headers.json` in the task workspace | Use 0.142.0 as the first local compatibility target; this observes the published artifact, not Pages dashboard settings |
 | Production build settings | Configured Hugo version, host build command/output settings and environment remain unconfirmed | M0 stays incomplete; local version discovery and fixes may proceed |
-| Preview/rollback | Host preview behavior and recoverable known-good deployment not yet evidenced | Blocks release, not local output/preview checks |
+| Preview/rollback | User-supplied hosted preview inspected; navigation and environment isolation issues remain; recoverable production deployment unconfirmed | Preview evidence is scoped; production release remains gated |
 | Live caching | Prior samples: homepage DYNAMIC; article HIT with Last-Modified/304; JPG one-week freshness; SVG one-year freshness; fingerprinted CSS/JS HIT/ETag/304 | Evidence is URL-specific; raw captures, full precedence and browser correction tests remain open |
 
 Do not mark M0 or M6 complete merely because a local build succeeds. The published generator establishes a useful compatibility target; a documented local pin does not establish the current Pages configuration. Public evidence can narrow unknowns; do not retrieve secrets or mutate account configuration to fill gaps.
@@ -48,7 +48,7 @@ Each owner hands off: branch/worktree, base/head revision, exact changed paths, 
 ## Release and rollback gates
 
 - Preserve a route/image manifest and the previous generated artifact or confirmed recoverable Pages deployment. Retain assets needed by both old and new HTML; do not prune them during rollout.
-- Verify the exact Pages build/output/environment and preview settings before claiming release readiness. Ensure production indexing and preview indexing differ intentionally. The current task does not activate a preview or production deployment.
+- Verify the exact Pages build/output/environment and preview settings before claiming release readiness. Ensure production indexing and preview indexing differ intentionally. Parent coordinates the approved candidate push/preview cycle; production publication remains a separate decision.
 - Validate the effective live header rules separately from the checked-in `_headers` file. Test conditional requests and browser reuse independently from CDN HIT/Age. Changing a header or purging the CDN cannot expire an already-fresh browser copy.
 - Rehearse a corrected image locally/in a permitted preview using a new stable versioned derivative when prompt correction requires it. Keep old original URLs; account for cached HTML; avoid random query-string cache busting. Record what the returning browser sees and when.
 - Run full candidate QA and a disposable draft/new-post rehearsal. Document the rollback artifact, retained asset set, and expected browser/CDN behavior. A source revert alone is not proof of immediate visible rollback.
@@ -56,9 +56,9 @@ Each owner hands off: branch/worktree, base/head revision, exact changed paths, 
 
 ## Execution record
 
-### Local checkpoint: code candidate `797c489`
+### Current checkpoint: local code `e33d28e`, hosted sample before the excerpt fix
 
-Implementation is integrated locally on `maintenance/candidate-20261021`, code revision `797c4893b600682391fd52a419b9cee0a1f51992`. Documentation-only changes follow that revision. Independent local QA resumed and completed serially with per-process `GOMAXPROCS=2`; no builds remain active and no local inference ran during resumed QA. No background monitoring is scheduled. No push, deployment, purge, or live configuration change occurred.
+Implementation is integrated locally on `maintenance/candidate-20261021`, code revision `e33d28ed02e9d9e2d6beb314a67f5b9ad3a96426`. It integrates Plex's `e0b6edf` excerpt fix with an identical tree, independently verified before integration. The hosted sample reviewed below predates that fix and matches sampled `797c489` production output from the prior `1e343cc` branch checkpoint. It is not evidence that the latest fix is deployed. No builds remain active; resumed local and hosted QA used no local inference. Parent owns the approved updated-branch push and hosted recheck; no background monitoring is scheduled.
 
 | Evidence | Outcome and limit |
 |---|---|
@@ -69,16 +69,28 @@ Implementation is integrated locally on `maintenance/candidate-20261021`, code r
 | Final correction and targeted builds | At `797c489`, warm production/preview PASS: wrapper 18.945/17.374 seconds; Hugo 9.923/12.544 seconds. The old height-auto selector failed coverage for nine home and 13 starter images; the corrected rule left zero uncovered. New CSS fingerprint emitted and prior CSS retained byte-for-byte. This is selector/markup evidence, not a rendered appearance test. |
 | Output preservation and media | All 76 HTML routes, metadata and checked local references pass; no original asset loss. All 35 articles retain generated fragment IDs. All 2,029 derivatives retain their bytes after the CSS correction; independent binary dimensions and filename hashes passed on the full candidate. |
 | Local authoring, retention and correction | At `d8ab662`, disposable draft exclusion/development inclusion/publication preparation passed; explicit and automatic prior-artifact retention passed; tampered retained assets failed without changing any last-good output bytes. A bounded image fixture reproduced stable URLs, produced new versions on correction, retained old versions, and restored original URLs on revert. Local artifact checks do not establish browser/CDN freshness or host rollback. |
-| Interactive QA | Environment-blocked: computer-use inventory exposed no apps/browsers; the in-app route failed with `Browser is not available: iab` despite Chrome/Edge being installed. Desktop/mobile rendering, focus/keyboard, zoom, assistive technology, actual source selection and browser-cache reuse remain untested. No alternative automation or public server workaround was used. |
-| Release readiness | Not established: configured Pages build/preview settings, effective deployed candidate headers, host provisioning of prior artifacts, returning-browser corrected-image rollout, and host rollback remain unverified. |
+| Excerpt follow-up | Independent `e0b6edf` production wrapper PASS in 32.814 seconds; 19 tests PASS in 2.077 seconds, zero skips. All 257 excerpts are within 220 characters with no renderer-helper leaks; five affected full-article main regions and original-image links unchanged. Old-partial negative control fails the two intended tests. All 76 HTML routes and 2,033 retained versioned media/CSS files preserved. Integrated as tree-identical `e33d28e`; hosted recheck pending. |
+| Integrated excerpt candidate | Root reran production at `e33d28e`: Hugo 17.451 seconds and offline validator PASS; all 19 tests passed in 2.480 seconds, zero skips. No additional build was run by Tars for documentation. |
+| Interactive QA | Earlier local browser route unavailable. Parent later passed sampled hosted desktop checks at 1180 x 757: layout, WebP/SVG/original links, skip-link focus, H1/canonical structure, code display and keyboard use. Mobile/DPR, zoom/reflow, screen-reader, measured Core Web Vitals and returning-browser cache behavior remain untested. |
+| Release readiness | Not established: preview-origin navigation/environment discrepancies, configured Pages settings, host provisioning of prior artifacts, returning-browser corrected-image rollout and host rollback remain open. Sampled hosted cache directives/asset validators passed; these do not close every host gate. |
 
 Kipp's report is task-workspace `qa-evidence/qa-report.md`. Supporting evidence includes `candidate-source-preservation.json`, `resumed-candidate-prod-build.log`, `resumed-candidate-preview-build.log`, `candidate-independent-review.json`, `article-anchor-preservation.json`, `binary-media-dimensions.json`, `remaining-integrated-checks.json`, and `authoring-and-correction-checks.json` in the same directory. The report identifies final-correction logs separately. The fresh-cache/full-scenario checks were at `d8ab662`; the later CSS/test-only change received targeted independent reruns at `797c489`. Image-size comparisons are static candidate-file budgets, not measured mobile transferred bytes or Core Web Vitals.
 
 **Remaining QA and release steps:**
 
-1. Restore an authorized controllable browser/assistive-technology route, then verify representative desktop/mobile pages, readable diagrams, focus/skip link, zoom/reflow, image source selection and measured network behavior. Confirm the repaired image aspect ratio in rendered output. The currently unavailable browser surface must be resolved; do not expose a local server publicly or change network settings.
-2. Confirm actual Pages settings and a recoverable deployment, establish clean-build provisioning of all retained versioned assets, and verify deployed header precedence, validators and cache behavior in an authorized preview. Repeat the corrected-image/revert rehearsal with fresh and returning browsers to test the stated freshness objective; local artifact success cannot close this gate.
-3. Present the final revision, diff, independent report, browser/host results, retention mechanism and rollback target for a separate release decision. Re-run affected checks if implementation changes; documentation-only commits do not establish or invalidate rendered behavior. Do not automatically push, merge to `master`, deploy or purge.
+1. Parent completes the approved candidate push and rechecks the hosted excerpt fix. Coordinate scoped preview navigation/hero-origin and build-environment corrections, then verify navigation remains on preview and its HTML/robots match the intended environment while retaining HTTP noindex protection. Keep canonical/social policy separate.
+2. Complete mobile/DPR, zoom/reflow, screen-reader, image-legibility/source-selection and measured transfer/performance checks. Complete fresh/returning-browser correction and revert checks; desktop screenshots and local artifact fixtures do not substitute for these.
+3. Confirm actual Pages settings and a recoverable deployment, establish clean-build provisioning of all retained assets, and reconcile effective header precedence and validator behavior. Present the final revision, diff, QA results, retention mechanism and rollback target for a separate production release decision. Re-run affected checks after implementation changes; do not merge to `master`, publish production or purge automatically.
+
+### Hosted preview evidence and open discrepancies
+
+On October 21, 2026, Kipp read [the user-supplied preview](https://maintenance-candidate-202610.joelguerra-hugo.pages.dev/): ten URLs and 27 GET/repeat/conditional requests. Home, wiring article and page-two HTML were byte-identical to tested `797c489` production output; active CSS hash begins `c1f927`. This is sampled artifact identity, not proof of dashboard settings or the deployed Git SHA. Parent separately supplied the desktop results above.
+
+Observed policy: HTML `public, max-age=0, must-revalidate`; mutable JPG/PNG/SVG `public, max-age=3600, must-revalidate`; hashed CSS/derivatives `public, max-age=31536000, immutable`. Seven asset/robots conditional requests returned 304 with zero body bytes. HTML exposed no ETag/Last-Modified, so its conditional behavior is untested. No Age/CF-Cache-Status was exposed; edge policy and browser reuse cannot be inferred. Captured body hashes/bytes use `Accept-Encoding: identity`, not measured mobile transfer totals.
+
+All sampled ordinary responses carry HTTP `X-Robots-Tag: noindex`, even though HTML meta and robots are production-like. Internal navigation/brand links and hero background requests escape to production. These isolation discrepancies remain open; proposed fixes use internal relative destinations/local hero paths and the existing preview environment, subject to coordinated implementation. The excerpt helper leak found in five page-two cards is corrected locally as above, with hosted confirmation pending.
+
+Evidence is in task-workspace `qa-evidence/hosted-preview-report.md`, `hosted-preview-responses.json`, `hosted-preview-matrix.json`, asset-identity/navigation reports and captured bodies. The excerpt checks are in `plex-excerpt-independent-report.md` and its logs/results. Its original integration-denied note is historical: explicit later approval resolved that block and parent integrated `e33d28e`.
 
 ### Implementation history
 
@@ -86,7 +98,7 @@ The initial plan was committed locally as `e44ee2d`. Case verified the official 
 
 The base build emits a raw-HTML warning for an existing cosmetic wrapper. Preserve that behavior and the diagram/content; do not enable unsafe HTML globally to suppress it. Parent made that scope decision after comparing the baseline.
 
-Bounded local inference reviewed public cache-regression material using `store:false`; final decisions remain with the implementing/reviewing agents. Useful Unicode/space-path fixture and redundant-fingerprint observations were retained for consideration. Incorrect redirect-cache and ordinary-image CORS claims were rejected; these are not implementation requirements.
+Root made two successful bounded Offload requests to local `openai/gpt-oss-20b` with `store:false`: public manifest/config assessment (44.065 seconds command time) and cache-test planning review (50.880 seconds). These were review assistance, not implementation or QA delegation; frontier agents validated the output and rejected incorrect compatibility, redirect-cache and ordinary-image CORS claims. Token usage was not returned, so output caps are not token counts and no cost/token savings are claimed. No new inference ran during resumed/hosted QA. Exact options, provenance and rejected claims are recorded in task-workspace `qa-evidence/local-inference-usage.md`.
 
 The checkpoint above supersedes earlier pending-status notes. Unchecked milestone items represent acceptance gates not fully closed, rather than a claim that their implementation has not begun. Local success does not clear the release gates.
 
