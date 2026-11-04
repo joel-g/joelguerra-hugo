@@ -2,6 +2,12 @@
 
 This is a starting style guide inferred from Joel's existing articles. Follow Joel's explicit direction when it differs from this guide, and refine the guide as he supplies preferences.
 
+## Before starting work
+
+- Always pull the latest `master` from `origin` before beginning work in this repository, including writing and editing articles. Inspect the current branch and working-tree status first so local work is preserved.
+- On `master`, run `git pull --ff-only origin master` before making changes. On a working branch, fetch and update local `master` first, then integrate it into the working branch as appropriate.
+- If local changes or divergent history prevent a clean update, reconcile them without discarding work or force-pushing. Don't silently proceed from stale `master`.
+
 ## Voice
 
 - Write like a developer showing a friend something he built or figured out: conversational, direct, practical, and technically specific.
