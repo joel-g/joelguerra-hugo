@@ -13,7 +13,8 @@ This is a starting style guide inferred from Joel's existing articles. Follow Jo
 - Write like a developer showing a friend something he built or figured out: conversational, direct, practical, and technically specific.
 - Use first person for Joel's own work and opinions. Use “you” when addressing the reader and “we” when walking through a task together.
 - Use contractions and ordinary language. Read the prose aloud; it should sound like a person talking, not a product announcement or a corporate white paper.
-- Let enthusiasm come from the project and the details. Avoid sales pitches, grand claims, and generic excitement.
+- Joel explicitly says sales pitches aren't his style. Write project introductions as a builder explaining the work, without marketing hype, manufactured urgency, or pressure to sign up. A plain link to try a project is enough.
+- Let enthusiasm come from the project and the details. Avoid grand claims and generic excitement.
 - Humor can be dry, sarcastic, irreverent, or occasionally crude when it fits the subject. Don't manufacture jokes or turn every paragraph into a bit.
 - Treat readers as capable and curious. Explain unfamiliar mechanisms without lecturing or assuming that everyone knows the same tools.
 
@@ -106,7 +107,7 @@ Read these as examples of voice and approach, not as current technical authority
 - `content/tech/how-to-ssh-to-your-azure-linux-vms-with-username-and-password-from-windows-linux-or-mac.md`: conversational instructions tied to screenshots and commands.
 - `content/tech/how-to-draw-a-dick-on-the-city-of-belleuve.md`: hands-on technical explanation with an irreverent premise and running commentary.
 
-Posts in “the Martin files” reproduce another author's material; don't use their prose as evidence of Joel's personal voice. The NameCamper introduction has a more promotional tone; use that register only when Joel asks for it.
+Posts in “the Martin files” reproduce another author's material; don't use their prose as evidence of Joel's personal voice. Joel confirmed that the original NameCamper introduction was written by an LLM before this guide. Don't use that original version as evidence of his voice or preferences. Revisions of that article should follow this guide.
 
 ## Repository conventions
 

@@ -1,48 +1,46 @@
 ---
-title: "Introducing NameCamper: Claim Your Dream Username"
+title: "Introducing NameCamper: Username and Domain Monitoring"
 date: 2026-01-17T08:00:00-08:00
 draft: false
+description: "NameCamper keeps a watchlist of usernames and domains, checks them on a schedule, and shows what the latest successful check found."
+summary: "I built NameCamper to keep watch on usernames and domains. Save the names you want, see the latest check results, and verify a possible opening with the platform or registrar."
+featured_image: "/img/introducing-namecamper-username-monitoring/watchlist.jpg"
+featured_image_alt: "NameCamper's watchlist displaying sample domain, Instagram, and X check results."
 tags: ["namecamper", "saas"]
 ---
 
-You know that perfect username you've been eyeing? The one that's been taken since 2012 by someone who posted twice and disappeared? Or that domain name that would be *perfect* for your brand, but some squatter is holding it hostage? What if I told you there's now a way to know the *instant* they become available?
+I built [NameCamper](https://namecamper.com) to keep watch on usernames and domains. You save the names you're interested in, and it checks them on a schedule so you can come back and see what changed.
 
-Introducing [NameCamper](https://namecamper.com) — a monitoring service that watches your dream usernames and domain names so you don't have to obsessively check them at 3am.
+An unused-looking account can sit on a good handle for years. A domain you want might already be registered to someone who isn't doing much with it. You can keep opening the same profile or looking up the same domain, but that gets old pretty quickly.
 
-## The Problem
+NameCamper gives those names a place to live while you wait. Here's the watchlist:
 
-We've all been there. You want `@coolname` on Instagram, Twitter, TikTok, or whatever platform the kids are using these days. But it's taken. So you settle for `@coolname_2847` or `@the_real_coolname` like some kind of animal.
+![NameCamper watchlist with sample entries showing a domain that may be available, an unchecked Instagram handle, and an unconfirmed X profile.](/img/introducing-namecamper-username-monitoring/watchlist.jpg)
 
-Same story with domains. You want `coolbrand.com` but it's parked by a squatter asking $15,000 for it, or it's sitting on some abandoned website from 2008. So you end up with `getcoolbrand.io` or `coolbrand-app.com` and hope nobody notices.
+*The screenshots in this article come from a local copy of the application with sample names and results.*
 
-The thing is, usernames and domains become available all the time. Social accounts get deleted. People rebrand. Platforms do cleanup sweeps of inactive accounts. Domains expire when owners forget to renew. But unless you're manually checking every day, you'll never know when your perfect name opens up.
+## Add a name and keep watch
 
-## How NameCamper Works
+Choose a platform, enter the handle or domain, and save it. One name on one platform uses one watch slot. If you want the same handle on Instagram and YouTube, those are two separate watches.
 
-It's dead simple:
+The app covers Instagram, TikTok, YouTube, domains, and X, with different checks depending on the platform. Domain watches support `.com`, `.net`, `.org`, and `.ai`. The add-name form shows which platforms can currently accept watches and which have monitoring paused.
 
-1. Sign up at [namecamper.com](https://namecamper.com)
-2. Add the usernames or domains you want to monitor
-3. For usernames, select which platforms to watch (Instagram, Twitter, TikTok, etc.)
-4. We check availability automatically and notify you when something opens up
+![NameCamper's add-name form with Instagram selected and sample_handle entered, alongside the watch-slot allowance.](/img/introducing-namecamper-username-monitoring/add-name.jpg)
 
-That's it. No more calendar reminders to "check if @username is available yet." No more WHOIS lookups to see if that domain finally expired. No more missing your window because you were asleep or, you know, living your life.
+*Adding a sample Instagram handle. The form shows the platform, name, and how many watch slots are in use.*
 
-## Currently in Beta (aka Free)
+Once you've saved a name, the watchlist shows its result and the time of the last successful check. Eligible names are normally checked daily. A platform's login requirements, rate limits, or other restrictions can delay a check, so that timestamp is useful.
 
-Here's the fun part — NameCamper is currently in beta, which means **all features are completely free** while we iron out the kinks. You get access to:
+## What the results tell you
 
-- Social media username monitoring (Instagram, Twitter, TikTok, and more)
-- Domain name monitoring (watch for expiring or dropped domains)
-- Automatic availability checks
-- Email notifications when your name becomes available
+A missing profile doesn't always mean you can register its username. Platforms can reserve names, hold them after an account is deleted, or prevent a checker from seeing the profile at all. A domain check also needs to be followed up with a registrar before you try to buy it.
 
-We're using this beta period to gather feedback and make sure the service is rock solid before we start charging. So if you've got opinions, we want to hear them.
+That's why the watchlist says “May be available.” It gives you something to investigate. You still need to verify directly with the platform or registrar, and NameCamper doesn't claim or register names for you.
 
-## Try It Out
+X has a narrower role: its checks can confirm that an account exists. An unconfirmed X profile doesn't establish that the handle is free, and those checks don't generate availability alerts.
 
-Head over to [namecamper.com](https://namecamper.com), create an account, and start camping on those usernames and domains you've been dreaming about. It's free during beta, so there's literally no reason not to.
+## Try the free beta
 
-And as always, if you have feedback, bugs to report, or just want to tell me about the name you finally snagged — hit me up on [Twitter](https://twitter.com/joelatwar).
+NameCamper is currently free during beta, with three watch slots and a normal daily check interval. Grab an account at [namecamper.com](https://namecamper.com) and add a few names you want to keep an eye on.
 
-Happy camping!
+If something is unclear or a check looks wrong, bother me on [Twitter](https://twitter.com/joelatwar).
