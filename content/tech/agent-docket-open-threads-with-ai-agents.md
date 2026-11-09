@@ -1,17 +1,17 @@
 ---
 title: "Agent Docket: Keeping Track of Open Threads With AI Agents"
 date: 2026-11-08T12:00:00Z
-draft: true
-description: "A Cloudflare Worker, a small CLI, and a TRMNL display for tracking which agent conversations need your attention."
-summary: "I built Agent Docket to put open threads with AI agents on an e-ink display, split into what needs me and what is waiting on someone else."
+draft: false
+description: "A Cloudflare Worker, a small CLI, and a TRMNL display for tracking who has the next step on tasks that span days or weeks."
+summary: "I built Agent Docket to keep track of tasks I work on with AI agents over days or weeks, from waiting on someone else's reply to making a decision myself."
 tags: ["ai", "cloudflare", "trmnl"]
 ---
 
-An agent can finish its part of a task and still need you to review a draft or approve a change. Meanwhile, another thread is waiting on somebody else, and opening it again won't make them respond any faster.
+Some tasks you give a personal agent can take days or weeks. I'll use shopping for car insurance as an example. You ask a few insurers for quotes, one sends a price the next day, and another needs your annual mileage before they can finish. An AI agent can help you keep the quotes straight, but there's still a lot of time when the next step belongs to you or someone you're waiting on.
 
-I built Agent Docket to put those open threads on a [TRMNL](https://trmnl.com) e-ink display. It has two columns: **Needs you** and **Waiting on others**. An agent can add an item, update it as things change, move it between columns, and remove it when we're done.
+I built Agent Docket for work that happens in bursts over days or weeks. It puts open tasks on a [TRMNL](https://trmnl.com) e-ink display so I can see who has the next step without reopening each chat. The display has two columns: **Needs you** and **Waiting on others**.
 
-The distinction is who owns the next step. An agent being busy doesn't automatically mean something belongs on the display. A question I need to answer does.
+While the quotes are coming in, “Compare car insurance quotes” sits under **Waiting on others**. If an insurer asks for my mileage, the AI agent can move that same item to **Needs you** and say what I need to send. Once I've replied, it can move the item back. When the quotes are ready, the item goes under **Needs you** again so I can compare them and pick a policy. Then the agent can take it off the docket.
 
 ## From a command to the screen
 
@@ -25,15 +25,15 @@ Here's an example. From the Agent Docket checkout, with the Worker URL and Docke
 
 ```sh
 node bin/docket.js list --json
-node bin/docket.js add --title "Review article draft" --detail "Check the CLI example before publishing" --group needs-you --source "Writing agent" --json
+node bin/docket.js add --title "Compare car insurance quotes" --detail "Send annual mileage for the last quote" --group needs-you --json
 ```
 
-The first command matters. If the article is already on the docket, we should update that item instead of adding another one every time the conversation moves forward.
+The first command matters. If the insurance task is already on the docket, we should update that item as the quotes come in instead of adding another one.
 
 The create response includes an item ID. Use that ID in place of `ITEM_ID` below when the next step belongs to somebody else:
 
 ```sh
-node bin/docket.js update ITEM_ID --detail "Waiting for technical review"
+node bin/docket.js update ITEM_ID --detail "Waiting for the final quote"
 node bin/docket.js move ITEM_ID waiting-on-others
 ```
 
@@ -49,7 +49,7 @@ Each change attempts to update TRMNL. The physical screen still follows its refr
 
 The repository includes an `AGENTS.md` file with guidance for working with the docket. Keep the title short, make the detail say what needs to happen, reuse the item's ID, and check whether an operation actually succeeded.
 
-For the article example, "Review article draft" is a useful title. "Article" leaves me opening the conversation to remember why it's there. The optional source label can tell me which agent or workflow put it on the board, and a reference URL stays available through the API.
+“Compare car insurance quotes” tells me what I'm doing, and “Send annual mileage for the last quote” tells me what I can do today. The optional source label can tell me which agent or workflow put it on the board, and a reference URL stays available through the API.
 
 Items can also have a due date and a kind: topic, reminder, or todo. A reminder is an item on the screen. There's no scheduler hiding behind it that will send a notification at 9am. Due dates affect sorting.
 
@@ -59,7 +59,7 @@ The display fits four items per column, with a count for anything beyond that. I
 
 One detail that matters for an agent is what happens when the item saves but the webhook fails.
 
-The Worker writes to KV before calling TRMNL. Suppose the item saves successfully, then TRMNL rejects the webhook or the request times out. Repeating the original `add` could create a second item. Now the board has two reminders to review the same article, which isn't much of an improvement.
+The Worker writes to KV before calling TRMNL. Suppose the item saves successfully, then TRMNL rejects the webhook or the request times out. Repeating the original `add` could create a second item. Now the board has two reminders to send the same mileage figure, which isn't much of an improvement.
 
 The API reports storage and delivery separately. The CLI returns exit code `3` when an item was saved but the display wasn't updated. Once the delivery problem is resolved, send the current docket again:
 
@@ -90,5 +90,3 @@ The Worker also attempts a webhook push after every change. Keep TRMNL's [webhoo
 For this version, the useful update is that a task needs a decision or that the next step has changed hands. Put that on the screen, with enough detail to act on it.
 
 The code and setup instructions are in the [Agent Docket repository](https://github.com/joel-g/agent-docket-trmnl).
-
-<!-- Publication check: confirm the Agent Docket repository is public and the link is accessible before changing draft to false. -->
