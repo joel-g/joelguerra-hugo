@@ -4,6 +4,8 @@ date: 2026-11-08T12:00:00Z
 draft: false
 description: "A Cloudflare Worker, a small CLI, and a TRMNL display for tracking who has the next step on tasks that span days or weeks."
 summary: "I built Agent Docket to keep track of tasks I work on with AI agents over days or weeks, from waiting on someone else's reply to making a decision myself."
+featured_image: "/img/agent-docket/trmnl-display.png"
+featured_image_alt: "Agent Docket on a TRMNL e-ink display, with three items under Needs you and two under Waiting on others."
 tags: ["ai", "cloudflare", "trmnl"]
 ---
 
@@ -12,6 +14,8 @@ Some tasks you give a personal agent can take days or weeks. I'll use shopping f
 I built Agent Docket for work that happens in bursts over days or weeks. It puts open tasks on a [TRMNL](https://trmnl.com) e-ink display so I can see who has the next step without reopening each chat. The display has two columns: **Needs you** and **Waiting on others**.
 
 While the quotes are coming in, “Compare car insurance quotes” sits under **Waiting on others**. If an insurer asks for my mileage, the AI agent can move that same item to **Needs you** and say what I need to send. Once I've replied, it can move the item back. When the quotes are ready, the item goes under **Needs you** again so I can compare them and pick a policy. Then the agent can take it off the docket.
+
+![Agent Docket on a TRMNL e-ink display. The Needs you column includes follow-ups with PEMCO and Grundy. Waiting on others lists NameCamper Instagram check metrics and a State Farm rerate.](/img/agent-docket/trmnl-display.png)
 
 ## From a command to the screen
 
