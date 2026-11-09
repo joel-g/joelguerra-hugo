@@ -49,7 +49,7 @@ Use the underlying habits more often than the memorable lines. Preserve natural 
 
 ## Shape of an article
 
-- Open with the actual problem, what Joel built, or what the reader will learn. Get to the subject within the first few paragraphs.
+- Put the thesis in the first sentence. If the title asks a question, answer it directly. For a how-to, state the job and what it accomplishes. For a project write-up, say what Joel built and what it does. Bring in the example, video, or first step once the reader knows the point of the article.
 - For a project write-up, explain what it does, how it works, and the interesting decisions or problems encountered. Choose the order that makes the project easiest to understand.
 - For a tutorial, walk through the work in the order the reader needs to do it. Explain why a step matters when the reason isn't obvious.
 - Use descriptive headings when they help navigation. Don't force every article into the same outline or add headings to every few sentences.

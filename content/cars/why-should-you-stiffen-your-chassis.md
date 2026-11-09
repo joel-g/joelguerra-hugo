@@ -6,7 +6,7 @@ tags: ["honda", "crx"]
 featured_image: "/img/why-should-you-stiffen-your-chassis/1.png"
 ---
 
-The first brace I'd put on an EF Honda is a front strut tower bar. On my CRX I could feel the difference as soon as I turned into a corner. The front end felt more direct. In the video I install and compare a few braces so you can see what bolts up under the hood and what goes underneath the car.
+Stiffening the chassis on an older Honda can make the steering feel more direct by keeping the suspension mounts from moving around as much in a corner. The first brace I'd put on an EF Honda is a front strut tower bar. On my CRX I could feel the difference as soon as I turned into a corner. In the video I install and compare a few braces so you can see what bolts up under the hood and what goes underneath the car.
 
 {{< youtube 1dQvCODP6Jk >}}
 

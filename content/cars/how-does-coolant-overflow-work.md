@@ -5,7 +5,7 @@ draft: false
 tags: ["honda"]
 ---
 
-The little hose off the radiator on this setup carries coolant in both directions. It sends coolant to the overflow bottle as the engine warms up and brings it back when the engine cools. In the video I swap the plastic bottle for a metal one from Evil Energy.
+The coolant overflow reservoir holds the extra coolant the radiator pushes out as the engine warms up, then supplies it back as the engine cools. Coolant travels both ways through the little hose between the radiator and the bottle. In the video I swap the plastic bottle for a metal one from Evil Energy.
 
 {{< youtube PiynEnyNewI >}}
 

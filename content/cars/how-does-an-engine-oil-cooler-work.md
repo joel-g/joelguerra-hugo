@@ -5,7 +5,7 @@ draft: false
 tags: ["honda", "oil", "cooling"]
 ---
 
-Engine oil picks up heat as it moves through the engine. If you're doing lap after lap, that heat can build up and thin the oil. An air-to-oil cooler is a little radiator that lets the oil shed some of that heat before it goes around again. In the video I show the parts that make that loop work.
+An engine oil cooler takes heat out of the oil before it goes back through the engine. The air-to-oil kind works like a little radiator. Hot oil runs through it and air carries the heat away. If you're doing lap after lap, that helps keep the oil from getting too hot and thinning out. In the video I show the parts that make that loop work.
 
 {{< youtube P-HLNZ9nE5Q >}}
 
